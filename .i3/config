@@ -1,0 +1,237 @@
+# font used for window tiles, will also be used by the bar unless a different font
+# is specified in the bar {} block below
+font xft:Monospace 9
+
+# movement keys
+set $up k
+set $down j
+set $left h
+set $right l
+
+# use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+# start a terminal
+bindsym Mod1+Return exec urxvt
+
+# start browser
+bindsym Mod1+b exec google-chrome-stable
+
+# kill focused window
+bindsym Mod1+Shift+q kill
+
+# start program launcher
+bindsym Mod1+d exec rofi -show run
+
+# window switcher
+bindsym Mod1+w exec rofi -show window
+
+# change focus
+bindsym Mod1+$left focus left
+bindsym Mod1+$down focus down
+bindsym Mod1+$up focus up
+bindsym Mod1+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod1+Left focus left
+bindsym Mod1+Down focus down
+bindsym Mod1+Up focus up
+bindsym Mod1+Right focus right
+
+# move focused window
+bindsym Mod1+Shift+$left move left
+bindsym Mod1+Shift+$down move down
+bindsym Mod1+Shift+$up move up
+bindsym Mod1+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod1+Shift+Left move left
+bindsym Mod1+Shift+Down move down
+bindsym Mod1+Shift+Up move up
+bindsym Mod1+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod1+semicolon split h
+
+# split in vertical orientation
+bindsym Mod1+v split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod1+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod1+s layout stacking
+bindsym Mod1+t layout tabbed
+bindsym Mod1+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod1+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod1+space focus mode_toggle
+
+# focus the parent container
+bindsym Mod1+a focus parent
+
+# focus the child container
+bindsym Mod1+z focus child
+
+# move the currently focused window to the scratchpad
+bindsym Mod1+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod1+minus scratchpad show
+
+# switch to workspace
+bindsym Mod1+1 workspace 1
+bindsym Mod1+2 workspace 2
+bindsym Mod1+3 workspace 3
+bindsym Mod1+4 workspace 4
+bindsym Mod1+5 workspace 5
+bindsym Mod1+6 workspace 6
+bindsym Mod1+7 workspace 7
+bindsym Mod1+8 workspace 8
+bindsym Mod1+9 workspace 9
+bindsym Mod1+0 workspace 10
+
+# nagivate workspaces left/right
+bindsym Mod1+Ctrl+$right workspace next
+bindsym Mod1+Ctrl+$left workspace prev
+
+# move focused container to workspace
+bindsym Mod1+Shift+1 move container to workspace 1
+bindsym Mod1+Shift+2 move container to workspace 2
+bindsym Mod1+Shift+3 move container to workspace 3
+bindsym Mod1+Shift+4 move container to workspace 4
+bindsym Mod1+Shift+5 move container to workspace 5
+bindsym Mod1+Shift+6 move container to workspace 6
+bindsym Mod1+Shift+7 move container to workspace 7
+bindsym Mod1+Shift+8 move container to workspace 8
+bindsym Mod1+Shift+9 move container to workspace 9
+bindsym Mod1+Shift+0 move container to workspace 10
+
+# move to workspace with focused container
+bindsym Mod1+Ctrl+1 move container to workspace number 1; workspace 1 
+bindsym Mod1+Ctrl+2 move container to workspace number 2; workspace 2 
+bindsym Mod1+Ctrl+3 move container to workspace number 3; workspace 3 
+bindsym Mod1+Ctrl+4 move container to workspace number 4; workspace 4 
+bindsym Mod1+Ctrl+5 move container to workspace number 5; workspace 5 
+bindsym Mod1+Ctrl+6 move container to workspace number 6; workspace 6 
+bindsym Mod1+Ctrl+7 move container to workspace number 7; workspace 7 
+bindsym Mod1+Ctrl+8 move container to workspace number 8; workspace 8 
+bindsym Mod1+Ctrl+9 move container to workspace number 9; workspace 9 
+bindsym Mod1+Ctrl+0 move container to workspace number 10; workspace 10
+
+# reload the configuration file
+bindsym Mod1+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym Mod1+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'really exit?' -b 'Yes, do the thing' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing down will shrink the window’s height.
+        # Pressing up will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+        bindsym $up       	resize grow height 10 px or 10 ppt
+        bindsym $down       resize shrink height 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # smaller increments
+        bindsym Shift+$left		resize shrink width 5 px or 5 ppt
+        bindsym Shift+$right	resize grow width 5 px or 5 ppt
+        bindsym Shift+$up		resize grow height 5 px or 5 ppt
+        bindsym Shift+$down		resize shrink height 5 px or 5 ppt
+
+        # even smaller
+        bindsym Ctrl+$left		resize shrink width 1 px or 1 ppt
+        bindsym Ctrl+$right		resize grow width 1 px or 1 ppt
+        bindsym Ctrl+$up		resize grow height 1 px or 1 ppt
+        bindsym Ctrl+$down		resize shrink height 1 px or 1 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym Mod1+r mode "resize"
+
+mode "fancygaps" {
+		bindsym Space gaps inner 50; gaps outer 25; mode "default"
+		bindsym Enter gaps inner 33; gaps outer 0; mode "default"
+		bindsym Escape mode "default"
+}
+bindsym Mod1+g mode "fancygaps"
+
+# power management
+
+# Autostart applications
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id redshift
+exec --no-startup-id unclutter
+exec --no-startup-id compton -b -c
+exec --no-startup-id dropbox
+exec --no-startup-id ~/.scripts/screenblank
+exec --no-startup-id xrdb ~/.Xresources
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3blocks
+        position bottom
+        tray_output primary
+        font xft:Fira Mono 11
+		workspace_buttons yes
+		height 25
+
+        colors {
+        		background		#282828
+        		separator		#ebdbb2
+        		statusline		#ebdbb2
+        		focused_workspace		#689d6a #689d6a #282828
+        		active_workspace		#689d6a #689d6a #282828
+        		inactive_workspace		#282828 #282828 #ebdbb2
+        		urgent_workspace		#cc241d #cc241d #ebdbb2
+        }
+}
+
+## Theme colors
+# class				#border #bg		#text	#indicator
+# ----------------------------------------------------
+client.focused	  	#689d6a #689d6a #689d6a #689d6a
+client.unfocused 	#282828 #282828 #282828 #282828
+client.urgent 	  	#cc241d #cc241d #cc241d #cc241d
+client.background			#282828
+
+# Hide borders
+hide_edge_borders none
+
+
+###
+### settings for i3-gaps
+###
+
+# disable window titlesbars entirely
+for_window [class="^.*"] border pixel 7
+
+# set inner/outer gaps
+gaps inner 33
+gaps outer 0
+
+# smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# smart borders (draw borders around container only if it is not the only container on this workspace) 
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
