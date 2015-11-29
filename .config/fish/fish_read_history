@@ -1,0 +1,6 @@
+- cmd: function fehll\nfeh --bg-fill $argv\nend
+  when: 1448749038
+- cmd: function fehll\nfeh --bg-fill $argv\nend
+  when: 1448751939
+- cmd: function fehll\nfeh --bg-fill $argv\nend
+  when: 1448757804

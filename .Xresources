@@ -1,0 +1,5 @@
+#include ".Xresources.d/rxvt-unicode"
+#include ".Xresources.d/rofi"
+#include ".Xresources.d/colors/gruvbox"
+
+*font:	xft:Fira Mono:size=11

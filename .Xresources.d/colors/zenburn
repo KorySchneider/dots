@@ -1,0 +1,19 @@
+! zenburn
+#define background	    #1f1f1f
+#define foreground	    #dcdccc
+#define black		    #3f3f3f
+#define red			    #705050
+#define green		    #60b48a
+#define yellow		    #dfaf8f
+#define blue		    #506070
+#define purple		    #dc8cc3
+#define cyan		    #8cd0d3
+#define white		    #dcdccc
+#define brightBlack     #709080
+#define brightRed		#dca3a3
+#define brightGreen		#c3bf9f
+#define brightYellow	#f0dfaf
+#define brightBlue		#94bff3
+#define brightPurple	#ec93d3
+#define brightCyan		#93e0e3
+#define brightWhite		#ffffff

@@ -1,0 +1,26 @@
+rofi.terminal: urxvt
+rofi.lines:		5
+
+
+! fullscreen padding
+!rofi.width:		100
+!rofi.padding:	280
+
+!box padding
+rofi.width:		40
+rofi.padding:	35
+
+
+rofi.eh:		2
+rofi.opacity:	90
+rofi.bw:		2
+
+
+rofi.bc:		#282828
+rofi.bg:		#282828
+rofi.fg:		#458588
+
+rofi.hlbg:		#282828
+rofi.hlfg:		#83a598
+
+rofi.font:		Fira Mono 14

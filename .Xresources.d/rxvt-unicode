@@ -1,0 +1,24 @@
+! URxvt
+URxvt*termName: rxvt-256color
+URxvt*xftAntialias: true
+
+URxvt*cursorColor:	#fbf1c7
+URxvt*colorUL: #366060
+URxvt*underlineColor: #dfaf8f
+
+URxvt*letterSpace: -1
+
+URxvt*transparent: false
+!URxvt*shading: 25
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.matcher.button: 1
+
+URxvt*loginShell: true
+URxvt*cursorBlink: true
+URxvt*pointerBlank: true
+URxvt*pointerBlankDelay: 2
+URxvt*scrollBar: false
+URxvt*secondaryScroll: true
+URxvt*borderless: true
