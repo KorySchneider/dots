@@ -4,6 +4,7 @@
 
 
 export TERM=screen-256color
+export VISUAL=vim
 
 
 set -gx PATH $PATH ~/.scripts
