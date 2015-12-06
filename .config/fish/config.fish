@@ -4,13 +4,12 @@
 
 
 export TERM=screen-256color
-export VISUAL=vim
 
 
 set -gx PATH $PATH ~/.scripts
 
-
 set walls ~/Dropbox/walls/
+set dots ~/git/dots/
 
 
 # Modify the terminal's 256 color palette to use the gruvbox theme
