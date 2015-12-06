@@ -3,10 +3,6 @@ set nocompatible
 colorscheme gruvbox
 set background=dark
 
-" map control-backspace to delete the previous word
-" only works in gvim ;_;
-:imap <C-BS> <C-W>
-
 set nu
 
 inoremap kj <Esc>
@@ -45,10 +41,4 @@ set title
 set nobackup
 set noswapfile
 
-if has('gui_running')
-  set guifont=Consolas:h11
-endif
-
 nnoremap ; :
-
-nmap <silent> ,/ :nohlsearch<CR>

@@ -1,10 +1,6 @@
 # ~/.config/fish/config.fish
 
-#test $TERM != "screen"; and exec tmux -2
-
-
 export TERM=screen-256color
-
 
 set -gx PATH $PATH ~/.scripts
 
