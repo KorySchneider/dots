@@ -167,20 +167,11 @@ mode "resize" {
 }
 bindsym Mod1+r mode "resize"
 
-mode "fancygaps" {
-		bindsym Space gaps inner 50; gaps outer 25; mode "default"
-		bindsym Enter gaps inner 33; gaps outer 0; mode "default"
-		bindsym Escape mode "default"
-}
-bindsym Mod1+g mode "fancygaps"
-
-# power management
-
 # Autostart applications
-#exec --no-startup-id ~/.fehbg
 exec --no-startup-id hsetroot -fill ~/Dropbox/walls/sapling.png
+#exec --no-startup-id hsetroot -solid '#282828'
 exec --no-startup-id redshift
-exec --no-startup-id unclutter
+exec --no-startup-id unclutter --timeout 3
 exec --no-startup-id compton -b -c
 exec --no-startup-id dropbox
 exec --no-startup-id ~/.scripts/screenblank
