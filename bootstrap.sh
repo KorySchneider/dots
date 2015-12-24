@@ -2,7 +2,7 @@
 
 dir=~/git/dots/                    # dotfiles directory
 olddir=~/dotfiles_old/             # old dotfiles backup directory
-files=".compton.conf .config/fish/config.fish .config/fish/functions/fehll.fish .config/fish/functions/lsa.fish .config/fish/functions/please.fish .gitconfig .i3/config .i3/i3blocks.conf .i3/scripts/battery.py .i3/scripts/disk .i3/scripts/volume .i3/scripts/weather.sh .scripts/blurlock .scripts/screenblank .tmux.conf .vim/colors/gruvbox.vim .vim/colors/wombat256mod.vim .vim/colors/zenburn.vim .vimrc .xinitrc .Xresources"        # list of files/folders to symlink in homedir
+files=".compton.conf .config/fish/functions/fish_prompt.fish .config/fish/config.fish .config/fish/functions/fehll.fish .config/fish/functions/lsa.fish .config/fish/functions/please.fish .gitconfig .i3/config .i3/i3blocks.conf .i3/scripts/battery.py .i3/scripts/disk .i3/scripts/volume .i3/scripts/weather.sh .scripts/blurlock .scripts/screenblank .tmux.conf .vim/colors/gruvbox.vim .vim/colors/wombat256mod.vim .vim/colors/zenburn.vim .vimrc .xinitrc .Xresources"        # list of files/folders to symlink in homedir
 
 ##########
 

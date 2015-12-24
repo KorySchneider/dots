@@ -10,7 +10,7 @@ function fish_prompt --description 'Write out the prompt'
 
 	printf '%s ' (__fish_git_prompt)
 
-	echo -n '| '
+	echo -n '> '
 
 	set_color '#ebdbb2'
 end
