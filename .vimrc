@@ -38,5 +38,6 @@ set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set nobackup
 set noswapfile
+set noerrorbells
 filetype plugin indent on
 syntax enable
