@@ -41,3 +41,4 @@ set noswapfile
 set noerrorbells
 filetype plugin indent on
 syntax enable
+autocmd filetype python set tabstop=4 shiftwidth=4 " python specific space tabbing
