@@ -20,4 +20,3 @@ export VISUAL="vim"
 alias ls='ls --color=auto'
 alias lsa='ls -a --color=auto'
 alias ll='ls -l --color=auto'
-alias cdgit='cd /cygdrive/c/users/kory/github/'
