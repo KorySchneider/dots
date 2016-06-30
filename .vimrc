@@ -14,6 +14,7 @@ set timeoutlen=200
 "" General Settings
 set nocompatible
 set title
+set relativenumber
 set number " line numbers
 set hidden " hide buffers instead of closing them
 set backspace=indent,eol,start
