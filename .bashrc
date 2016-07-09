@@ -15,7 +15,6 @@ function parse_git_branch {
 export PS1='\[\033[38;5;223m\]\w\[\033[38;5;208m\]$(parse_git_branch)\[\033[38;5;41m\]$ \[\033[38;5;223m\]'
 export VISUAL="vim"
 
-# aliases
 alias ls='ls --color=auto'
 alias lsa='ls -a --color=auto'
 alias ll='ls -l --color=auto'
