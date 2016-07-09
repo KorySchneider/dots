@@ -11,9 +11,8 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-export PS1='\u@\h \[\033[1;33m\]\W\[\033[0m\]$(parse_git_branch)# '
 
-# use vim for stuff
+export PS1='\[\033[38;5;223m\]\w\[\033[38;5;208m\]$(parse_git_branch)\[\033[38;5;41m\]$ \[\033[38;5;223m\]'
 export VISUAL="vim"
 
 # aliases
