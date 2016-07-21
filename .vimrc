@@ -1,3 +1,7 @@
+"" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 "" Theme
 set background=dark
 colorscheme gruvbox
@@ -5,10 +9,12 @@ colorscheme gruvbox
 
 "" Custom Bindings
 let mapleader=","
+map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>cs :nohl <Enter>
+nnoremap <leader>ta :IndentGuidesToggle <Enter>
 nnoremap ; :
 inoremap kj <Esc>
-set timeoutlen=200
+set timeoutlen=250
 
 
 "" General Settings
@@ -24,11 +30,11 @@ set ignorecase " case-insensitive search
 set smartcase " case-sensitive search if any caps are used
 set hlsearch " highlight search matches
 set incsearch " searches as you type search text
-set scrolloff=4 " can always see at least X number of lines above and below cursor
+set scrolloff=2 " can always see at least X number of lines above and below cursor
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab " spaces instead of tabs
 set smarttab " insert/delete shiftwidth number of spaces at beginning of lines
-set tabstop=3 shiftwidth=3
+set tabstop=2 shiftwidth=2
 set softtabstop=0
 set autoindent
 set copyindent
@@ -42,4 +48,7 @@ set noswapfile
 set noerrorbells
 filetype plugin indent on
 syntax enable
-autocmd filetype python set tabstop=4 shiftwidth=4 " python specific space tabbing
+
+"" File specific settings
+autocmd filetype python set tabstop=4 shiftwidth=4
+autocmd filetype gitcommit setlocal spell textwidth=72
