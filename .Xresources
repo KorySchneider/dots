@@ -1,4 +1,4 @@
-*font:	xft:Source Code Pro:size=11
+*font:	xft:Source Code Pro:size=11,xft:Monospace:size=11:antialias=true:hinting=true
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
