@@ -12,6 +12,7 @@ set timeoutlen=200
 
 
 "" General Settings
+cd ~
 set nocompatible
 set title
 set relativenumber
