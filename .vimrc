@@ -6,16 +6,14 @@ execute pathogen#infect()
 set background=dark
 colorscheme gruvbox
 
-
 "" Custom Bindings
 let mapleader=","
-map <C-n> :NERDTreeToggle<CR>
+map <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>cs :nohl <Enter>
 nnoremap <leader>ta :IndentGuidesToggle <Enter>
 nnoremap ; :
 inoremap kj <Esc>
 set timeoutlen=250
-
 
 "" General Settings
 set nocompatible
