@@ -1,8 +1,29 @@
 #!/bin/bash
 
-dir=~/git/dots/                    # dotfiles directory
-olddir=~/dotfiles_old/             # old dotfiles backup directory
-files=".compton.conf .config/fish/functions/fish_prompt.fish .config/fish/config.fish .config/fish/functions/fehll.fish .config/fish/functions/lsa.fish .config/fish/functions/please.fish .gitconfig .i3/config .i3/i3blocks.conf .i3/scripts/battery.py .i3/scripts/disk .i3/scripts/volume .i3/scripts/weather.sh .scripts/blurlock .scripts/screenblank .tmux.conf .vim/colors/gruvbox.vim .vim/colors/wombat256mod.vim .vim/colors/zenburn.vim .vimrc .xinitrc .Xresources"        # list of files/folders to symlink in homedir
+apt-get update
+apt-get install bash-completion i3 git tmux chromium-browser rofi rxvt-unicode-256color
+
+# dotfiles directory
+dir=~/git/dots/
+# old dotfiles backup directory
+olddir=~/.dotfiles_old/
+# list of files/folders to symlink in homedir
+files=".bashrc \
+  .compton.conf \
+  .gitconfig \
+  .i3/config \
+  .i3/i3blocks.conf \
+  .i3/scripts/disk \
+  .i3/scripts/weather.sh \
+  .scripts/blurlock \
+  .scripts/screenblank \
+  .tmux.conf \
+  .vim/colors/gruvbox.vim \
+  .vim/colors/wombat256mod.vim \
+  .vim/colors/zenburn.vim \
+  .vimrc \
+  .xinitrc \
+  .Xresources"
 
 ##########
 
@@ -18,9 +39,9 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-	echo "Moving any existing dotfiles from ~ to $olddir"
+	echo "Moving old $file from ~ to $olddir"
 	mv ~/$file ~/dotfiles_old/
-	echo "Creating symlink to $file in home directory."
+	echo "Creating symlink to new $file in home directory."
 	ln -s $dir/$file ~/$file
 done
 
