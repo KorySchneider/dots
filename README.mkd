@@ -2,3 +2,5 @@
 These are my linux configuration files. 
 
 I use [Antergos](https://antergos.com/) on my laptop and [Lubuntu](http://lubuntu.net/) on my desktop currently; the dotfiles for each are kept in separate branches.
+
+Feel free to use anything you find here.
