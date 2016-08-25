@@ -8,14 +8,15 @@ colorscheme gruvbox
 
 "" Custom Bindings
 let mapleader=","
-map <leader>tt :NERDTreeToggle<CR>
-nnoremap <leader>cs :nohl <Enter>
-nnoremap <leader>ta :IndentGuidesToggle <Enter>
+map <silent> <leader>tt :NERDTreeToggle<CR>
+nnoremap <silent> <leader>cs :nohl<CR>
+nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 nnoremap ; :
 inoremap kj <Esc>
 set timeoutlen=250
 
 "" General Settings
+set mouse=a
 set nocompatible
 set title
 set relativenumber
@@ -32,7 +33,8 @@ set scrolloff=2 " can always see at least X number of lines above and below curs
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab " spaces instead of tabs
 set smarttab " insert/delete shiftwidth number of spaces at beginning of lines
-set tabstop=2 shiftwidth=2
+set tabstop=2
+set shiftwidth=2
 set softtabstop=0
 set autoindent
 set copyindent
