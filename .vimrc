@@ -16,6 +16,7 @@ inoremap kj <Esc>
 set timeoutlen=250
 
 "" General Settings
+cd ~
 set mouse=a
 set nocompatible
 set title
