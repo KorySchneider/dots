@@ -8,7 +8,8 @@ dir=~/git/dots/
 # old dotfiles backup directory
 olddir=~/.dotfiles_old/
 # list of files/folders to symlink in homedir
-files=".bashrc \
+files="\
+  .bashrc \
   .compton.conf \
   .gitconfig \
   .i3/config \
@@ -39,10 +40,10 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-	echo "Moving old $file from ~ to $olddir"
-	mv ~/$file ~/dotfiles_old/
-	echo "Creating symlink to new $file in home directory."
-	ln -s $dir/$file ~/$file
+  echo "Moving old $file from ~ to $olddir"
+  mv ~/$file ~/dotfiles_old/
+  echo "Creating symlink to new $file in home directory."
+  ln -s $dir/$file ~/$file
 done
 
 source ~/.bashrc
