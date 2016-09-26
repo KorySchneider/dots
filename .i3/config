@@ -132,38 +132,38 @@ bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'really exit?' -b 'Yes, do th
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+  # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing down will shrink the window’s height.
-        # Pressing up will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
-        bindsym $right      resize grow width 10 px or 10 ppt
-        bindsym $up       	resize grow height 10 px or 10 ppt
-        bindsym $down       resize shrink height 10 px or 10 ppt
+  # Pressing left will shrink the window’s width.
+  # Pressing right will grow the window’s width.
+  # Pressing down will shrink the window’s height.
+  # Pressing up will grow the window’s height.
+  bindsym $left       resize shrink width 10 px or 10 ppt
+  bindsym $right      resize grow width 10 px or 10 ppt
+  bindsym $up         resize grow height 10 px or 10 ppt
+  bindsym $down       resize shrink height 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+  # same bindings, but for the arrow keys
+  bindsym Left        resize shrink width 10 px or 10 ppt
+  bindsym Down        resize grow height 10 px or 10 ppt
+  bindsym Up          resize shrink height 10 px or 10 ppt
+  bindsym Right       resize grow width 10 px or 10 ppt
 
-        # smaller increments
-        bindsym Shift+$left		resize shrink width 5 px or 5 ppt
-        bindsym Shift+$right	resize grow width 5 px or 5 ppt
-        bindsym Shift+$up		resize grow height 5 px or 5 ppt
-        bindsym Shift+$down		resize shrink height 5 px or 5 ppt
+  # smaller increments
+  bindsym Shift+$left   resize shrink width 5 px or 5 ppt
+  bindsym Shift+$right  resize grow width 5 px or 5 ppt
+  bindsym Shift+$up   resize grow height 5 px or 5 ppt
+  bindsym Shift+$down   resize shrink height 5 px or 5 ppt
 
-        # even smaller
-        bindsym Ctrl+$left		resize shrink width 1 px or 1 ppt
-        bindsym Ctrl+$right		resize grow width 1 px or 1 ppt
-        bindsym Ctrl+$up		resize grow height 1 px or 1 ppt
-        bindsym Ctrl+$down		resize shrink height 1 px or 1 ppt
+  # even smaller
+  bindsym Ctrl+$left    resize shrink width 1 px or 1 ppt
+  bindsym Ctrl+$right   resize grow width 1 px or 1 ppt
+  bindsym Ctrl+$up    resize grow height 1 px or 1 ppt
+  bindsym Ctrl+$down    resize shrink height 1 px or 1 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 bindsym Mod1+r mode "resize"
 
@@ -181,31 +181,31 @@ exec --no-startup-id xset m 0/1 4
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.i3/i3blocks.conf
-        position bottom
-        tray_output primary
-        font xft:Fira Mono 11
-		workspace_buttons yes
-		height 25
+  status_command i3blocks -c ~/.i3/i3blocks.conf
+  position bottom
+  tray_output primary
+  font xft:Sauce Code Powerline 12
+  workspace_buttons yes
+  height 25
 
-        colors {
-        		background		#282828
-        		separator		#ebdbb2
-        		statusline		#ebdbb2
-        		focused_workspace		#689d6a #689d6a #282828
-        		active_workspace		#689d6a #689d6a #282828
-        		inactive_workspace	#282828 #282828 #ebdbb2
-        		urgent_workspace		#cc241d #cc241d #ebdbb2
-        }
+  colors {
+    background    #282828
+    separator     #ebdbb2
+    statusline    #ebdbb2
+    focused_workspace   #689d6a #689d6a #282828
+    active_workspace    #689d6a #689d6a #282828
+    inactive_workspace  #282828 #282828 #ebdbb2
+    urgent_workspace    #cc241d #cc241d #ebdbb2
+  }
 }
 
 ## Theme colors
-# class				      #border #bg		  #text	  #indicator
+# class             #border #bg     #text   #indicator
 # ----------------------------------------------------
-client.focused	  	#83a598 #83a598 #689d6a #689d6a
-client.unfocused 	  #504945 #504945 #282828 #282828
-client.urgent 	  	#cc241d #cc241d #cc241d #cc241d
-client.background		#282828
+client.focused      #83a598 #83a598 #689d6a #689d6a
+client.unfocused    #504945 #504945 #282828 #282828
+client.urgent       #cc241d #cc241d #cc241d #cc241d
+client.background   #282828
 
 # Hide borders
 hide_edge_borders none
