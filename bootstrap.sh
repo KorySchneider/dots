@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install bash-completion i3 git tmux chromium-browser rofi rxvt-unicode-256color
+apt-get install bash-completion i3 i3blocks git tmux chromium-browser rofi rxvt-unicode-256color vim screenfetch hsetroot gimp
 
 # dotfiles directory
 dir=~/git/dots/
