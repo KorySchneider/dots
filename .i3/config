@@ -175,7 +175,7 @@ exec --no-startup-id compton -b -c
 exec --no-startup-id dropbox
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id xrandr --output DVI-0 --left-of HDMI-0 --mode 1920x1080 --rate 144
+exec --no-startup-id xrandr --output DVI-D-0 --left-of HDMI-0 --mode 1920x1080 --rate 144
 exec --no-startup-id xset m 0/1 4
 
 # Start i3bar to display a workspace bar (plus the system information i3status
