@@ -216,7 +216,7 @@ hide_edge_borders none
 ###
 
 # disable window titlesbars entirely
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 # set inner/outer gaps
 gaps inner 33
