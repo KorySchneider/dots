@@ -200,12 +200,12 @@ bar {
 }
 
 ## Theme colors
-# class				      #border #bg		  #text	  #indicator
+# class             #border #bg/outline #text   #indicator
 # ----------------------------------------------------
-client.focused	  	#83a598 #83a598 #689d6a #689d6a
-client.unfocused 	  #504945 #504945 #282828 #282828
-client.urgent 	  	#cc241d #cc241d #cc241d #cc241d
-client.background		#282828
+client.focused      #000000 #689d6a     #689d6a #83a598
+client.unfocused    #000000 #504945     #282828 #282828
+client.urgent       #000000 #cc241d     #cc241d #cc241d
+client.background   #282828
 
 # Hide borders
 hide_edge_borders none
