@@ -1,6 +1,6 @@
 # font used for window tiles, will also be used by the bar unless a different font
 # is specified in the bar {} block below
-font xft:Source Code Pro 10
+font xft:Anonymice Powerline 12
 
 # movement keys
 set $up k
@@ -184,7 +184,6 @@ bar {
         status_command i3blocks -c ~/.i3/i3blocks.conf
         position bottom
         tray_output primary
-        font xft:Fira Mono 11
 		workspace_buttons yes
 		height 25
 
@@ -197,6 +196,7 @@ bar {
         		inactive_workspace	#282828 #282828 #ebdbb2
         		urgent_workspace		#cc241d #cc241d #ebdbb2
         }
+    font xft:Anonymice Powerline 15
 }
 
 ## Theme colors
