@@ -1,4 +1,4 @@
-*font:	xft:Sauce\ Code\ Powerline:size=12,xft:Monospace:size=12,xft:FontAwesome:size=12:antialias=true:hinting=true
+*font:	xft:Anonymice\ Powerline:size=13,xft:Monospace:size=12,xft:FontAwesome:size=12:antialias=true:hinting=true
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -46,7 +46,7 @@ rofi.fg:    #282828
 rofi.hlbg:    #8ec07c
 rofi.hlfg:    #282828
 
-rofi.font:		Source Code Pro 11
+rofi.font:    Anonymice Powerline 14
 
 ! ------------------------------------------------------- URxvt
 URxvt*termName: rxvt-256color
@@ -56,7 +56,7 @@ URxvt*cursorColor:	#fbf1c7
 URxvt*colorUL: #366060
 URxvt*underlineColor: #dfaf8f
 
-URxvt*letterSpace: -1
+URxvt*letterSpace: 1
 
 URxvt*transparent: false
 !URxvt*shading: 25
