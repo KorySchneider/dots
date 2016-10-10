@@ -11,6 +11,7 @@ let mapleader=","
 map <silent> <leader>tt :NERDTreeToggle<CR>
 nnoremap <silent> <leader>cs :nohl<CR>
 nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
+nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 nnoremap ; :
 inoremap kj <Esc>
 set timeoutlen=250
