@@ -1,24 +1,6 @@
-"" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
-"" Theme
-set background=dark
-colorscheme gruvbox
-
-"" Custom Bindings
-let mapleader=","
-map <silent> <leader>tt :NERDTreeToggle<CR>
-nnoremap <silent> <leader>cs :nohl<CR>
-nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
-nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
-nnoremap ; :
-inoremap kj <Esc>
-set timeoutlen=250
-
 "" General Settings
-set mouse=a
 set nocompatible
+set mouse=a
 set title
 set relativenumber
 set number " line numbers
@@ -49,6 +31,24 @@ set noswapfile
 set noerrorbells
 filetype plugin indent on
 syntax enable
+
+"" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+"" Theme
+set background=dark
+colorscheme gruvbox
+
+"" Custom Bindings
+let mapleader=","
+map <silent> <leader>tt :NERDTreeToggle<CR>
+nnoremap <silent> <leader>cs :nohl<CR>
+nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
+nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
+nnoremap ; :
+inoremap kj <Esc>
+set timeoutlen=250
 
 "" File specific settings
 autocmd filetype python set tabstop=4 shiftwidth=4
