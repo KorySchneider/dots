@@ -15,7 +15,7 @@ floating_modifier Mod1
 bindsym Mod1+Return exec urxvt
 
 # start browser
-bindsym Mod1+b exec chromium-browser
+bindsym Mod1+b exec google-chrome-stable
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -168,14 +168,15 @@ mode "resize" {
 bindsym Mod1+r mode "resize"
 
 # Autostart applications
-exec --no-startup-id hsetroot -solid '#458588'
+#exec --no-startup-id hsetroot -solid '#458588'
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
 exec --no-startup-id unclutter --timeout 3
 exec --no-startup-id compton -b -c
-exec --no-startup-id dropbox
+exec --no-startup-id dropbox start
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id xrandr --output DVI-D-0 --left-of HDMI-A-0 --mode 1920x1080 --rate 144 --primary
+exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --rate 144 --primary
 exec --no-startup-id xset m 0/1 4
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -219,12 +220,12 @@ hide_edge_borders none
 for_window [class="^.*"] border pixel 3
 
 # set inner/outer gaps
-gaps inner 33
-gaps outer 0
+gaps inner 30
+gaps outer -10
 
 # smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on
 
 # smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
+smart_borders no_gaps
