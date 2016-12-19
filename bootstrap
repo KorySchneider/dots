@@ -1,0 +1,13 @@
+#!/bin/bash
+
+path="$HOME/dots"
+
+dotfile_dirs=$(ls $path)
+
+for dir in $dotfile_dirs
+do
+  if [ "$dir" != "bootstrap" ]
+  then
+    stow $dir
+  fi
+done
