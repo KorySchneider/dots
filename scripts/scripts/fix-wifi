@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo ip link set wlo1 up
+/sbin/iw wlo1 link
+sudo /sbin/iw wlo1 scan
