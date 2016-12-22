@@ -36,7 +36,7 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
 
 # lock screen
-bindsym $mod+Shift+BackSpace exec lock
+bindsym $mod+Shift+BackSpace exec ~/scripts/lock
 
 # change focused window
 bindsym $mod+$left focus left
