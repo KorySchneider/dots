@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Not sure why simply defining the battery script as the
+# command in i3blocks.conf isn't working, but this does:
+python3 ~/.i3/scripts/battery.py
+
+
+
+
+#BATTERY=0
+#BATTERY_INFO=$(acpi -b | grep "Battery ${BATTERY}")
+#BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "Full\|Charging\|Discharging")
+#BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
+#
+#BATTERY_EMPTY=
+#BATTERY_QUARTER=
+#BATTERY_HALF=
+#BATTERY_THREE_QUARTERS=
+#BATTERY_FULL=
+#
+#if [[ "${BATTERY_POWER}" -lt "10" ]]; then
+#  echo "${BATTERY_EMPTY} ${BATTERY_POWER}%"
+#  echo "${BATTERY_EMPTY} ${BATTERY_POWER}%"
+#  echo "#fb4934" # red
+#
+#elif [[ "${BATTERY_POWER}" -lt "25" ]]; then
+#  echo "${BATTERY_QUARTER} ${BATTERY_POWER}%"
+#  echo "${BATTERY_QUARTER} ${BATTERY_POWER}%"
+#  echo "#fe8019" # orange
+#
+#elif [[ "${BATTERY_POWER}" -lt "50" ]]; then
+#  echo "${BATTERY_HALF} ${BATTERY_POWER}%"
+#  echo "${BATTERY_HALF} ${BATTERY_POWER}%"
+#  echo "#fabd2f" # yellow
+#
+#elif [[ "${BATTERY_POWER}" -lt "90" ]]; then
+#  echo "${BATTERY_THREE_QUARTERS} ${BATTERY_POWER}%"
+#  echo "${BATTERY_THREE_QUARTERS} ${BATTERY_POWER}%"
+#  echo "#ebdbb2" # white
+#
+#else
+#  echo "${BATTERY_FULL} ${BATTERY_POWER}%"
+#  echo "${BATTERY_FULL} ${BATTERY_POWER}%"
+#  echo "#ebdbb2" # white
+#
+#fi
