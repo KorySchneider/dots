@@ -201,10 +201,12 @@ set $inactive-text-color  #665c54
 set $bg-color             #282828
 set $inactive-bg-color    #282828
 set $urgent-bg-color      #cc241d
+set $border               #689d6a
+set $indicator            #8ec07c
 
 # Window colors
 #                        border             bg                 text                 indicator
-client.focused          $bg-color          $bg-color          $text-color          $bg-color
+client.focused          $border            $border            $text-color          $indicator
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $urgent-bg-color
@@ -239,7 +241,7 @@ bar {
 ##
 
 # disable window titlesbars entirely
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 # set inner/outer gaps
 gaps inner 30
