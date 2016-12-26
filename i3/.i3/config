@@ -188,7 +188,7 @@ for_window [class="Leafpad"] floating enable
 for_window [class="Thunar"] floating enable
 
 # Floating window size constraints
-floating_minimum_size 600 x 400
+floating_minimum_size 600 x 500
 floating_maximum_size -1 x -1
 
 ##
