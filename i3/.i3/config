@@ -180,7 +180,6 @@ exec --no-startup-id dropbox start
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
-exec --no-startup-id guake
 
 # Start floating
 for_window [class="Leafpad"] floating enable
