@@ -72,7 +72,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Ctrl+minus move scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
@@ -176,7 +176,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
 exec --no-startup-id unclutter --timeout 3
-exec --no-startup-id compton -b -c
+exec --no-startup-id compton -b -c --config ~/.compton.conf
 exec --no-startup-id dropbox start
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
