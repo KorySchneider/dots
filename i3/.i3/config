@@ -221,7 +221,7 @@ bar {
   tray_output primary
   font xft:Anonymice Powerline 12
   workspace_buttons yes
-  height 22
+  height 24
 
   colors {
     background  $bg-color
