@@ -24,7 +24,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # launch browser
-bindsym $mod+c exec chromium-browser
+bindsym $mod+c exec google-chrome-stable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -172,8 +172,8 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-#exec --no-startup-id hsetroot -solid '#458588'
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id hsetroot -solid '#458588'
+#exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
 exec --no-startup-id unclutter --timeout 3
 exec --no-startup-id compton -b -c --config ~/.compton.conf
@@ -217,7 +217,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 
 bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
-  position bottom
+  position top
   tray_output primary
   font xft:Anonymice Powerline 12
   workspace_buttons yes
