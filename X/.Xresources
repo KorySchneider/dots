@@ -1,4 +1,4 @@
-*font: xft:Anonymice\ Powerline:size=11,xft:Anonymice\ Powerline\ Nerd\ Font:size=11,xft:Monospace:size=11:antialias=true:hinting=true
+*font: xft:ProggyCleanTT\ Nerd\ Font:size=11,xft:Monospace:size=11:antialias=true:hinting=true
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -55,7 +55,7 @@ URxvt*transparent:       false
 URxvt*shading:           25
 
 URxvt.perl-ext-common:   default,matcher
-URxvt.url-launcher:      /usr/bin/chromium-browser
+URxvt.url-launcher:      /bin/chromium
 URxvt.matcher.button:    1
 
 URxvt*loginShell:        true

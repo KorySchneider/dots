@@ -24,7 +24,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # launch browser
-bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec chromium
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -172,23 +172,26 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-exec --no-startup-id hsetroot -solid '#458588'
+exec --no-startup-id xsetroot -solid '#458588'
 #exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
-exec --no-startup-id unclutter --timeout 3
+exec --no-startup-id unclutter -root -idle 3
 exec --no-startup-id compton -b -c --config ~/.compton.conf
 exec --no-startup-id dropbox start
-exec --no-startup-id ~/.scripts/screenblank
+exec --no-startup-id ~/scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --rate 144 --primary
 exec --no-startup-id xset m 0/1 4
+
+# TODO fix: X sees both monitors as one screen,
+#    :^(    monitor is not getting set to 144hz
+exec --no-startup-id xrandr --screen 0 --rate 144
 
 # Start floating
 for_window [class="Leafpad"] floating enable
 for_window [class="Thunar"] floating enable
 
 # Floating window size constraints
-floating_minimum_size 600 x 500
+floating_minimum_size 380 x 100
 floating_maximum_size -1 x -1
 
 ##
@@ -216,6 +219,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 ##
 
 bar {
+  # TODO pick a new bar (polybar, lemonbar?)
   status_command i3blocks -c ~/.i3/i3blocks.conf
   position top
   tray_output primary
