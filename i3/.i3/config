@@ -181,6 +181,7 @@ exec --no-startup-id dropbox start
 exec --no-startup-id ~/scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset m 0/1 4
+exec --no-startup-id xset -b # disable bell
 
 # TODO fix: X sees both monitors as one screen,
 #    :^(    monitor is not getting set to 144hz
@@ -219,13 +220,13 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 ##
 
 bar {
-  # TODO pick a new bar (polybar, lemonbar?)
   status_command i3blocks -c ~/.i3/i3blocks.conf
+  #status_command polybar bar
   position top
   tray_output primary
-  font xft:Anonymice Powerline 12
+  font xft:DejaVu Sans 12
   workspace_buttons yes
-  height 24
+  height 26
 
   colors {
     background  $bg-color
