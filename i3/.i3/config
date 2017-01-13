@@ -172,7 +172,7 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-exec --no-startup-id xsetroot -solid '#458588'
+exec --no-startup-id hsetroot -solid '#504945'
 #exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
 exec --no-startup-id unclutter -root -idle 3
