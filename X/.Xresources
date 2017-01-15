@@ -22,28 +22,28 @@
 *color15:    #ebdbb2
 
 ! ------------------------------------------------------- Rofi
-rofi.font:     DejaVu Sans 14
-rofi.terminal: urxvt
+rofi.font:            DejaVu Sans 14
+rofi.terminal:        urxvt
 
 rofi.separator-style: solid
-rofi.lines:    5
-rofi.line-margin: 10
+rofi.lines:           3
+rofi.line-margin:     10
 
-rofi.hide-scrollbar: true
-rofi.scroll-method: 0
+rofi.hide-scrollbar:  true
+rofi.scroll-method:   0
 
-rofi.width:    20
-rofi.padding:  40
-rofi.bw:       0
-rofi.eh:       1
+rofi.width:           18
+rofi.padding:         30
+rofi.bw:              0
+rofi.eh:              1
 
-rofi.opacity:  90
+rofi.opacity:         90
 
-rofi.bc:       #ebdbb2
-rofi.bg:       #ebdbb2
-rofi.fg:       #282828
-rofi.hlbg:     #8ec07c
-rofi.hlfg:     #282828
+rofi.bc:              #ebdbb2
+rofi.bg:              #ebdbb2
+rofi.fg:              #282828
+rofi.hlbg:            #8ec07c
+rofi.hlfg:            #282828
 
 ! ------------------------------------------------------- URxvt
 URxvt*termName:          rxvt-256color

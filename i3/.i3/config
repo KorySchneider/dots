@@ -172,10 +172,10 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-exec --no-startup-id hsetroot -solid '#504945'
+exec --no-startup-id hsetroot -solid "#282828"
 #exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
-exec --no-startup-id unclutter -root -idle 3
+exec --no-startup-id unclutter -root -idle 4
 exec --no-startup-id compton -b -c --config ~/.compton.conf
 exec --no-startup-id dropbox start
 exec --no-startup-id ~/scripts/screenblank
@@ -190,6 +190,7 @@ exec --no-startup-id xrandr --screen 0 --rate 144
 # Start floating
 for_window [class="Leafpad"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="URxvt"] floating enable
 
 # Floating window size constraints
 floating_minimum_size 380 x 100
@@ -222,7 +223,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
   #status_command polybar bar
-  position top
+  position bottom
   tray_output primary
   font xft:DejaVu Sans 12
   workspace_buttons yes
@@ -246,7 +247,7 @@ bar {
 ##
 
 # disable window titlesbars entirely
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 3
 
 # set inner/outer gaps
 gaps inner 30

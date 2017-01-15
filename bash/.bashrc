@@ -1,7 +1,7 @@
 ##
 # aliases
 ##
-alias please='sudo $(fc -ln -1)'
+alias pls='sudo $(fc -ln -1)'
 
 alias wall='hsetroot -fill'
 
