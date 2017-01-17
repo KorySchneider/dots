@@ -1,4 +1,4 @@
-*font: xft:ProggyCleanTT\ Nerd\ Font:size=11,xft:Monospace:size=11:antialias=true:hinting=true
+*font: xft:ProggyCleanTT:size=11,xft:Monospace:size=11:antialias=true:hinting=true
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -32,7 +32,7 @@ rofi.line-margin:     10
 rofi.hide-scrollbar:  true
 rofi.scroll-method:   0
 
-rofi.width:           18
+rofi.width:           28
 rofi.padding:         30
 rofi.bw:              0
 rofi.eh:              1
