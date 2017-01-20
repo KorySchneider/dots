@@ -1,4 +1,4 @@
-*font: xft:ProggyCleanTT\ Nerd\ Font:size=11,xft:Monospace:size=11:antialias=true:hinting=true
+*font: xft:ProggyCleanTT\ Nerd\ Font:size=11
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828

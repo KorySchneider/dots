@@ -2,7 +2,7 @@
 # Font
 ##
 
-font xft:Anonymice Powerline 12
+font xft:ProggyCleanTT Nerd Font 12
 
 ##
 # Bindings
@@ -231,7 +231,7 @@ bar {
 
   colors {
     background  $bg-color
-    separator   $text-color
+    separator   $bg-color
     statusline  $text-color
 
     #                   border             bg               text
@@ -255,7 +255,7 @@ gaps outer -10
 
 # smart gaps (gaps used if only more than one container on the workspace)
 # (disabled because it causes shadow overlap between multiple monitors)
-#smart_gaps on
+smart_gaps on
 
 # smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
