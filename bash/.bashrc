@@ -31,6 +31,7 @@ function parse_git_branch {
 ##
 export VISUAL="vim"
 export PS1="\[\033[38;5;142m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;203m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\[\033[38;5;228m\] \$(parse_git_branch) \n>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;230m\]"
+export PATH=$PATH:~/scripts
 
 ##
 # tmux
