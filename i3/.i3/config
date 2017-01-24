@@ -172,7 +172,8 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-exec --no-startup-id hsetroot -fill ~/Dropbox/walls/books-blur.jpg
+#exec --no-startup-id hsetroot -fill ~/Dropbox/walls/books-blur.jpg
+exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
 exec --no-startup-id unclutter --timeout 3
 exec --no-startup-id compton -b -c
@@ -216,7 +217,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 
 bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
-  position top
+  position bottom
   tray_output primary
   font xft:Anonymice Powerline 15
   workspace_buttons yes
@@ -224,7 +225,7 @@ bar {
 
   colors {
     background  $bg-color
-    separator   $text-color
+    separator   $bg-color
     statusline  $text-color
 
     #                   border             bg               text
