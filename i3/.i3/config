@@ -35,6 +35,9 @@ bindsym $mod+d exec rofi -show run
 # launch rofi window switcher
 bindsym $mod+w exec rofi -show window
 
+# launch spotify
+bindsym $mod+m exec spotify
+
 # lock screen
 bindsym $mod+Shift+BackSpace exec lock
 

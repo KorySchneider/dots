@@ -3,6 +3,8 @@
 ##
 alias pls='sudo $(fc -ln -1)'
 
+alias npmr='npm run-script'
+
 alias wall='hsetroot -fill'
 
 alias ls='ls --color=auto'
