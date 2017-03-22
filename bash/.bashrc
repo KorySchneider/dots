@@ -9,7 +9,7 @@ alias wall='hsetroot -fill'
 
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
-alias ll='ls -l --color=auto'
+alias ll='ls -1 --color=auto'
 
 ##
 # functions
@@ -45,3 +45,8 @@ export PATH="$HOME/.node_modules_global/bin:$PATH"
 if command -v tmux>/dev/null; then
    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
+
+##
+# thefuck
+##
+eval $(thefuck --alias)
