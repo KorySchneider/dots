@@ -2,7 +2,7 @@
 
 These are my linux configuration files.
 
-The dotfiles for my [desktop](https://github.com/KorySchneider/dots/tree/desktop) and [laptop](https://github.com/KorySchneider/dots/tree/laptop) are kept in separate branches. [media-netbook](https://github.com/KorySchneider/dots/tree/media-netbook) is a little netbook dedicated to spotify.
+The dotfiles for my [desktop](https://github.com/KorySchneider/dots/tree/desktop) and [laptop](https://github.com/KorySchneider/dots/tree/laptop) are kept in separate branches; [media-netbook](https://github.com/KorySchneider/dots/tree/media-netbook) is a little netbook with a Spotify-dedicated setup.
 
 Feel free to use anything you find here.
 
@@ -17,7 +17,7 @@ I use rofi as my launcher, but I launch the applications I use most frequently u
 
 ![rofi](https://i.imgur.com/gHo57la.jpg "rofi")
 
-Text editor is vim, file manager is thunar, image viewer is feh.
+Text editor is vim, file manager is thunar and image viewer is feh.
 
 ![vim thunar feh](https://i.imgur.com/qK4Tmkx.jpg "vim thunar feh")
 
