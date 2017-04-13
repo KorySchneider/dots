@@ -53,3 +53,4 @@ set timeoutlen=250
 "" File specific settings
 autocmd filetype python set tabstop=4 shiftwidth=4
 autocmd filetype gitcommit setlocal spell textwidth=72
+autocmd filetype rust set tabstop=4 shiftwidth=4

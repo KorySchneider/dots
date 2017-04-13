@@ -37,6 +37,8 @@ export VISUAL="vim"
 export PS1="\n\[$(tput sgr0)\]\[\033[38;5;203m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\[\033[38;5;228m\] \$(parse_git_branch) \n\[\033[38;5;142m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;230m\]"
 export PATH=$PATH:~/scripts
 export PATH="$HOME/.node_modules_global/bin:$PATH"
+export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
 ##
 # tmux
@@ -49,4 +51,5 @@ fi
 ##
 # thefuck
 ##
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
+# makes terminal start fucking slow
