@@ -9,7 +9,7 @@ alias wall='hsetroot -fill'
 
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
-alias ll='ls -1 --color=auto'
+alias l='ls -1 --color=auto'
 
 ##
 # functions
