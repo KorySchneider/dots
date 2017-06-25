@@ -47,9 +47,3 @@ export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 if command -v tmux>/dev/null; then
    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
-
-##
-# thefuck
-##
-#eval $(thefuck --alias)
-# makes terminal start fucking slow

@@ -9,6 +9,7 @@ font xft:ProggyCleanTT Nerd Font 12
 ##
 
 # mod key
+# Alt
 set $mod Mod1
 
 # movement keys
@@ -16,6 +17,29 @@ set $up k
 set $down j
 set $left h
 set $right l
+
+# change focused window
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# note: i3 has their horizontal/vertical splits mixed up
+# these are intuitively correct
+#
+# vertical split mode
+bindsym $mod+semicolon split h
+# horizontal split mode
+bindsym $mod+v split v
+
+# toggle fullscreen
+bindsym $mod+f fullscreen toggle
 
 # use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -41,27 +65,6 @@ bindsym $mod+m exec spotify
 # lock screen
 bindsym $mod+Shift+BackSpace exec lock
 
-# change focused window
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
-
-# move focused window
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
-
-# note: i3 has their horizontal/vertical splits mixed up
-# vertical split mode
-bindsym $mod+semicolon split h
-
-# horizontal split mode
-bindsym $mod+v split v
-
-# toggle fullscreen
-bindsym $mod+f fullscreen toggle
 
 # change container layout
 bindsym $mod+s layout stacking
@@ -188,7 +191,7 @@ exec --no-startup-id xset -b # disable bell
 
 # TODO fix: X sees both monitors as one screen,
 #    :^(    monitor is not getting set to 144hz
-exec --no-startup-id xrandr --screen 0 --rate 144
+#exec --no-startup-id xrandr --screen 0 --rate 144
 
 # Start floating
 for_window [class="Leafpad"] floating enable
