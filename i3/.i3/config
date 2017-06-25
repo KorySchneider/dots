@@ -65,7 +65,6 @@ bindsym $mod+m exec spotify
 # lock screen
 bindsym $mod+Shift+BackSpace exec lock
 
-
 # change container layout
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
@@ -179,14 +178,13 @@ bindsym $mod+r mode "resize"
 
 # Launch on startup
 exec --no-startup-id hsetroot -solid "#282828"
-#exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
 exec --no-startup-id unclutter
 exec --no-startup-id compton -b -c --config ~/.compton.conf
 exec --no-startup-id dropbox start
 exec --no-startup-id ~/scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id xset m 0/1 4
+exec --no-startup-id xset m 0/1 4 # mouse sens
 exec --no-startup-id xset -b # disable bell
 
 # TODO fix: X sees both monitors as one screen,
