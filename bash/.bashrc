@@ -17,7 +17,7 @@ function parse_git_branch {
 
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
-alias ll='ls -l --color=auto'
+alias l='ls -l --color=auto'
 alias please='sudo $(fc -ln -1)' # sudo execute last command
 alias li='xbacklight -set'
 
