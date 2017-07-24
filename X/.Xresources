@@ -1,4 +1,4 @@
-*font: xft:Anonymice\ Powerline:size=12,xft:Anonymice\ Powerline\ Nerd\ Font:size=12,xft:Monospace:size=11:antialias=true:hinting=true
+*font: xft:ProggyCleanTT\ Nerd\ Font:size=12
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -23,10 +23,10 @@
 
 ! ------------------------------------------------------- Rofi
 rofi.terminal: urxvt
-rofi.lines:    4
+rofi.lines:    3
 
 rofi.width:    20
-rofi.padding:  35
+rofi.padding:  30
 
 rofi.eh:       2
 rofi.opacity:  90
@@ -39,7 +39,7 @@ rofi.fg:       #282828
 rofi.hlbg:     #8ec07c
 rofi.hlfg:     #282828
 
-rofi.font:     Anonymice Powerline 14
+rofi.font:     DejaVu Sans 14
 
 ! ------------------------------------------------------- URxvt
 URxvt*termName:          rxvt-256color
@@ -49,7 +49,7 @@ URxvt*cursorColor:       #fbf1c7
 URxvt*colorUL:           #366060
 URxvt*underlineColor:    #dfaf8f
 
-URxvt*letterSpace:       2
+URxvt*letterSpace:       1
 
 URxvt*transparent:       false
 URxvt*shading:           25

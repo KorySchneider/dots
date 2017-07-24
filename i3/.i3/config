@@ -2,7 +2,7 @@
 # Font
 ##
 
-font xft:Anonymice Powerline 12
+font xft:ProggyClean\ Nerd\ Font 12
 
 ##
 # Bindings
@@ -219,7 +219,7 @@ bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
   position bottom
   tray_output primary
-  font xft:Anonymice Powerline 15
+  font xft:DejaVu Sans 12
   workspace_buttons yes
   height 30
 
@@ -241,16 +241,15 @@ bar {
 ##
 
 # disable window titlesbars entirely
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 
 # set inner/outer gaps
-gaps inner 30
+gaps inner 60
 gaps outer 0
 
 # smart gaps (gaps used if only more than one container on the workspace)
-# (disabled because it causes shadow overlap between multiple monitors)
 smart_gaps on
 
-# smart borders (draw borders around container only if it is not the only container on this workspace) 
+# smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders no_gaps
+smart_borders on
