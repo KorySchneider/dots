@@ -188,7 +188,7 @@ for_window [class="Thunar"] floating enable
 for_window [class="Gdebi-gtk"] floating enable
 
 # Floating window size constraints
-floating_minimum_size 600 x 500
+floating_minimum_size 600 x 400
 floating_maximum_size -1 x -1
 
 ##
@@ -244,7 +244,7 @@ bar {
 for_window [class="^.*"] border pixel 3
 
 # set inner/outer gaps
-gaps inner 60
+gaps inner 50
 gaps outer 0
 
 # smart gaps (gaps used if only more than one container on the workspace)
@@ -252,4 +252,4 @@ smart_gaps on
 
 # smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+smart_borders no_gaps

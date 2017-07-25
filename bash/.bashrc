@@ -7,6 +7,11 @@ if command -v tmux>/dev/null; then
    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
 
+mkcd() {
+  mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
+
 # git branch in prompt
 function parse_git_dirty {
    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
