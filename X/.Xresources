@@ -1,4 +1,4 @@
-*font: xft:ProggyCleanTT\ Nerd\ Font:size=11
+*font: xft:Fura\ Code\ Nerd\ Font:size=11
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -53,7 +53,7 @@ URxvt*cursorColor:       #fbf1c7
 URxvt*colorUL:           #366060
 URxvt*underlineColor:    #dfaf8f
 
-URxvt*letterSpace:       0
+URxvt*letterSpace:       1
 
 URxvt*transparent:       false
 URxvt*shading:           25
