@@ -1,13 +1,45 @@
 #!/bin/bash
 
-path="$HOME/dots"
+DOTS_DIR="$HOME/dots" # this script must be located here
+DOTFILE_DIRS=$(ls $DOTS_DIR)
 
-dotfile_dirs=$(ls $path)
+#Flags
+FONT_FLAG=""
+PKG_FLAG=""
 
-for dir in $dotfile_dirs
-do
-  if [ "$dir" != "bootstrap" ]
-  then
+# Parse args
+while getopts "fp" flag; do
+  case "${flag}" in
+    f) FONT_FLAG="true" ;;
+    p) PKG_FLAG="true" ;;
+  esac
+done
+
+# Packages
+if [ "$PKG_FLAG" == "true" ]; then
+  yaourt -Syu
+  yaourt -S --noconfirm stow vim compton rofi tmux i3-wm rxvt-unicode-256xresources i3blocks chromium feh evince nodejs npm
+fi
+
+# Fonts
+if [ "$FONT_FLAG" == "true" ]; then
+  if [ ! -d "$HOME/.fonts" ]; then
+    mkdir $HOME/.fonts
+  fi
+  git clone https://github.com/ryanoasis/nerd-fonts ~/.fonts/nerd-fonts
+  fc-cache -fv
+fi
+
+# Dotfiles
+
+# Remove common pre-existing dotfiles before stowing
+rm "$HOME/.bashrc" -f
+rm "$HOME/.xinitrc" -f
+rm "$HOME/.Xresources" -f
+
+# Stow
+for dir in $DOTFILE_DIRS; do
+  if [ "$dir" != "bootstrap" ]; then # skip this file
     stow $dir
   fi
 done
