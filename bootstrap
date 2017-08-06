@@ -41,5 +41,6 @@ rm "$HOME/.Xresources" -f
 for dir in $DOTFILE_DIRS; do
   if [ "$dir" != "bootstrap" ]; then # skip this file
     stow $dir
+    xrdb -merge ~/.Xresources
   fi
 done
