@@ -177,6 +177,7 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
+exec --no-startup-id xrandr --output DVI-D-1 --mode 1920x1080 -r 144
 exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
 exec --no-startup-id unclutter
@@ -186,10 +187,6 @@ exec --no-startup-id ~/scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset m 0/1 4 # mouse sens
 exec --no-startup-id xset -b # disable bell
-
-# TODO fix: X sees both monitors as one screen,
-#    :^(    monitor is not getting set to 144hz
-#exec --no-startup-id xrandr --screen 0 --rate 144
 
 # Start floating
 for_window [class="Leafpad"] floating enable
