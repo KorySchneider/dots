@@ -7,6 +7,7 @@ alias npmr='npm run-script'
 
 alias wall='hsetroot -fill'
 
+alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
 alias l='ls -1 --color=auto'
