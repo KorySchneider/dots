@@ -1,7 +1,7 @@
 ##
 # aliases
 ##
-alias pls='sudo $(fc -ln -1)'
+alias please='sudo $(fc -ln -1)'
 
 alias npmr='npm run-script'
 
