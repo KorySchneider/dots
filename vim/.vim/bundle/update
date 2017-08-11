@@ -1,0 +1,11 @@
+#!/bin/bash
+for dir in $(ls ~/.vim/bundle); do
+  if [ "$dir" != "update" ]; then # skip this script file
+    echo -e "\nUpdating $dir..."
+    cd $dir
+    git pull
+    cd ..
+  fi
+done
+
+echo "Finished updating plugins"
