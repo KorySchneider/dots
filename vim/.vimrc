@@ -1,3 +1,7 @@
+"" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 "" General Settings
 set nocompatible
 set mouse=a
@@ -13,7 +17,7 @@ set smartcase " case-sensitive search if any caps are used
 set hlsearch " highlight search matches
 set incsearch " searches as you type search text
 set scrolloff=2 " can always see at least X number of lines above and below cursor
-set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
+"set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab " spaces instead of tabs
 set smarttab " insert/delete shiftwidth number of spaces at beginning of lines
 set tabstop=2
@@ -31,10 +35,6 @@ set noswapfile
 set noerrorbells
 filetype plugin indent on
 syntax enable
-
-"" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
 
 "" Theme
 set background=dark

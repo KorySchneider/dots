@@ -26,6 +26,9 @@ bindsym $mod+Return exec urxvt
 # launch browser
 bindsym $mod+c exec chromium-browser
 
+# launch spotify
+bindsym $mod+m exec spotify
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
