@@ -32,7 +32,7 @@ alias li='xbacklight -set'
 alias npmr='npm run'
 alias py3='python3'
 
-alias wifi='wicd-gtk'
+alias wifi='sudo systemctl restart network-manager.service'
 
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
