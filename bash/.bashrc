@@ -18,6 +18,8 @@ alias l='ls -1 --color=auto'
 
 alias updot='cd ~/dots && git commit -am "Update dots" && git push'
 
+alias py3='python3'
+
 ##
 # functions
 ##
