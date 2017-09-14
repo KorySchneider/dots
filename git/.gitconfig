@@ -7,3 +7,5 @@
 	ch = checkout
 	s = status
 	d = diff
+	cm = commit
+	cl = clone
