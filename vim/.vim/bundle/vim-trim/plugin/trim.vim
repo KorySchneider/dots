@@ -1,22 +1,22 @@
 " Only load plugin once
-if exists("g:trim") | finish | endif
+if exists("g:loaded_trim") | finish | endif
 
 " Reset compatible
 let s:save_cpo = &cpo
 set cpo&vim
 
+command! -bang Trim :call Trim()
 
-function! s:Trim() abort
+
+function! Trim() abort
   " Save cursor position
-  winsaveview()
+  let pos = getpos(".")
 
   " Remove trailing whitespace
-  while search(" $", "n") !=# 0
-    %s/\s\+$//e
-  endwhile
+  %s/\s\+$//e
 
   " Restore cursor position
-  winrestview()
+  call setpos(".", pos)
 endfunction
 
 

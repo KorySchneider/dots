@@ -4,3 +4,7 @@
 	username = KorySchneider
 [push]
 	default = simple
+[alias]
+	ch = checkout
+	s = status
+	c = commit
