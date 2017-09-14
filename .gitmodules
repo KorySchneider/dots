@@ -37,3 +37,9 @@
 [submodule "vim/.vim/bundle/vim-surround"]
 	path = vim/.vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/.vim/bundle/vim-trim"]
+	path = vim/.vim/bundle/vim-trim
+	url = git@github.com:koryschneider/vim-trim
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
