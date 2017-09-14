@@ -45,4 +45,4 @@
 	url = https://github.com/tpope/vim-fugitive
 [submodule "vim/.vim/bundle/vim-templates"]
 	path = vim/.vim/bundle/vim-templates
-	url = https://github.com/ap/vim-templates
+	url = git@github.com:koryschneider/vim-templates
