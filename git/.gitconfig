@@ -3,3 +3,7 @@
 	name = Kory Schneider
 [push]
 	default = simple
+[alias]
+	ch = checkout
+	s = status
+	d = diff
