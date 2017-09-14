@@ -7,4 +7,5 @@
 [alias]
 	ch = checkout
 	s = status
-	c = commit
+  d = diff
+	cm = commit
