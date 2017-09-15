@@ -9,3 +9,5 @@
 	d = diff
 	cm = commit
 	cl = clone
+	pl = pull
+	pu = push
