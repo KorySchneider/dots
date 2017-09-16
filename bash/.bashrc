@@ -43,3 +43,4 @@ export NVM_DIR="/home/kory/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [[ -s "/home/kory/.gvm/scripts/gvm" ]] && source "/home/kory/.gvm/scripts/gvm"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

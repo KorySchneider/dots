@@ -9,3 +9,5 @@
 	s = status
   d = diff
 	cm = commit
+	b = branch
+	cl = clone
