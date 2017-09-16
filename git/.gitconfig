@@ -12,3 +12,4 @@
 	pl = pull
 	pu = push
 	b = branch
+	st = stash
