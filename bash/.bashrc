@@ -16,7 +16,7 @@ alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
 alias l='ls -1 --color=auto'
 
-alias updot='cd ~/dots && git commit -am "Update dots" && git push'
+alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias gitsubmoduleupdate='git submodule update --recursive --remote'
 
