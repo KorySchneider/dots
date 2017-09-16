@@ -11,3 +11,4 @@
 	cl = clone
 	pl = pull
 	pu = push
+	b = branch
