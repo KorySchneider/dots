@@ -18,7 +18,7 @@ alias l='ls -1 --color=auto'
 
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
-alias gitsubmoduleupdate='git submodule update --recursive --remote'
+alias vimpluginupdate='cd ~/.vim/bundle && git submodule update --recursive --remote && cd -'
 
 alias py3='python3'
 
