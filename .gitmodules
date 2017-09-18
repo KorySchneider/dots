@@ -37,3 +37,6 @@
 [submodule "vim-trim"]
 	path = vim-trim
 	url = git@github.com:koryschneider/vim-trim
+[submodule "vim/.vim/bundle/scss-syntax.vim"]
+	path = vim/.vim/bundle/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim
