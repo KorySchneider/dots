@@ -17,7 +17,6 @@ set smartcase " case-sensitive search if any caps are used
 set hlsearch " highlight search matches
 set incsearch " searches as you type search text
 set scrolloff=2 " can always see at least X number of lines above and below cursor
-"set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab " spaces instead of tabs
 set smarttab " insert/delete shiftwidth number of spaces at beginning of lines
 set tabstop=2
@@ -42,19 +41,14 @@ colorscheme gruvbox
 
 "" Custom Bindings
 let mapleader=","
-map <silent> <leader>tt :NERDTreeToggle<CR>
+set timeoutlen=300
+
+map <silent> <c-t> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>cs :nohl<CR>
 nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 nnoremap ; :
 inoremap kj <Esc>
-set timeoutlen=250
-
-"" Functions
-command! -bang WrapLine :call WrapLine()
-function! WrapLine() abort
-  gq$
-endfunction
 
 "" File specific settings
 autocmd filetype python set tabstop=4 shiftwidth=4
