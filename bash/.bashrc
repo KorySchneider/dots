@@ -5,10 +5,6 @@ alias please='sudo $(fc -ln -1)'
 
 alias npmr='npm run-script'
 
-alias gits='git status'
-alias gitcl='git clone'
-alias gitch='git checkout'
-
 alias wall='hsetroot -fill'
 
 alias ll='ls -l --color=auto'
