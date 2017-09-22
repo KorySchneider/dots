@@ -50,6 +50,12 @@ nnoremap ; :
 inoremap kj <Esc>
 set timeoutlen=250
 
+"" Functions
+command! -bang WrapLine :call WrapLine()
+function! WrapLine() abort
+  gq$
+endfunction
+
 "" File specific settings
 autocmd filetype python set tabstop=4 shiftwidth=4
 autocmd filetype gitcommit setlocal spell textwidth=72
