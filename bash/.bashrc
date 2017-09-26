@@ -10,6 +10,7 @@ alias gitcl='git clone'
 alias gitch='git checkout'
 
 alias wall='hsetroot -fill'
+alias screen='scrot -q 100 -d 5 -c $1'
 
 alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
@@ -27,7 +28,7 @@ alias py3='python3'
 ##
 mkcd() {
   mkdir -p -- "$1" &&
-    cd -P -- "$1"
+  cd -P -- "$1"
 }
 
 # for git branch in PS1
