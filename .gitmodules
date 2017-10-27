@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/scss-syntax.vim"]
 	path = vim/.vim/bundle/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "vim/.vim/bundle/vim-templates"]
+	path = vim/.vim/bundle/vim-templates
+	url = git@github.com:koryschneider/vim-templates
