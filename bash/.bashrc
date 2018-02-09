@@ -6,7 +6,7 @@ alias please='sudo $(fc -ln -1)'
 alias npmr='npm run-script'
 
 alias wall='hsetroot -fill'
-alias screen='scrot -q 100 -d 5 -c $1'
+alias screenshot='scrot -q 100 -d 5 -c $1'
 
 alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
