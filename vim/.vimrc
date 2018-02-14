@@ -13,7 +13,7 @@ Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 
 " Tools
-Plug 'justinmk/vim-sneak'
+Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1
 Plug 'danro/rename.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'koryschneider/vim-trim'
