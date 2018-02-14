@@ -1,3 +1,27 @@
+"" Plugins
+call plug#begin('~/.vim/plugged')
+
+" UI
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+
+" Syntax highlighting
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'gabrielelana/vim-markdown'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+
+" Tools
+Plug 'justinmk/vim-sneak'
+Plug 'danro/rename.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'koryschneider/vim-trim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+call plug#end()
+
 "" General Settings
 set nocompatible
 set mouse=a
