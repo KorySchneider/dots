@@ -32,10 +32,6 @@ set noerrorbells
 filetype plugin indent on
 syntax enable
 
-"" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 "" Theme
 set background=dark
 colorscheme gruvbox
