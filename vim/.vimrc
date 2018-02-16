@@ -62,9 +62,13 @@ colorscheme gruvbox
 
 "" Custom Bindings
 let mapleader=","
-map <silent> <leader>tt :NERDTreeToggle<CR>
+" (tr)ee
+map <silent> <leader>tr :NERDTreeToggle<CR>
+" (c)lear (s)earch
 nnoremap <silent> <leader>cs :nohl<CR>
+" (ta)b guides
 nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
+" (sp)ell check
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 nnoremap ; :
 inoremap kj <Esc>
