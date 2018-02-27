@@ -1,6 +1,27 @@
-"" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+"" Plugins
+call plug#begin('~/.vim/plugged')
+
+" UI
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+" Syntax highlighting
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'gabrielelana/vim-markdown'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+
+" Tools
+Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1
+Plug 'danro/rename.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'koryschneider/vim-trim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+call plug#end()
 
 "" General Settings
 set nocompatible
