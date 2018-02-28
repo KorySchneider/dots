@@ -21,6 +21,8 @@ alias py3='python3'
 
 alias slp='systemctl suspend'
 
+alias sysupdate='yaourt -Syu --noconfirm'
+
 ##
 # functions
 ##
@@ -42,13 +44,19 @@ function parse_git_branch {
 # exports
 ##
 export VISUAL="vim"
-
 export PS1="\n\[$(tput sgr0)\]\[\033[38;5;203m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\[\033[38;5;228m\] \$(parse_git_branch) \n\[\033[38;5;142m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;230m\]"
 
 export PATH=$PATH:~/scripts
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+
+export JAVA_HOME="/usr/lib/jvm/java-9-openjdk"
+export PATH=$JAVA_HOME/bin:$PATH
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ##
 # tmux
