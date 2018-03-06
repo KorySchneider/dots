@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Syntax highlighting
 Plug 'pangloss/vim-javascript'
