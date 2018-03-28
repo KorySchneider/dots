@@ -19,6 +19,7 @@ Plug 'danro/rename.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'koryschneider/vim-trim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 call plug#end()
