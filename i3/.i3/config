@@ -250,7 +250,7 @@ for_window [class="^.*"] border pixel 3
 
 # set inner/outer gaps
 gaps inner 45
-gaps outer 0
+gaps outer -15
 
 # smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
