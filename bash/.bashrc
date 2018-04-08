@@ -19,7 +19,7 @@ alias vimpluginupdate='cd ~/.vim/bundle && git submodule update --recursive --re
 
 alias py3='python3'
 
-alias slp='systemctl suspend && exit'
+alias slp='sleep 2; systemctl suspend && exit'
 
 alias sysupdate='yaourt -Syu --noconfirm'
 
