@@ -3,24 +3,22 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 plugins=(
   git
-  node
-  npm
-  python
-  sudo
+  #tmux
   wd
-  tmux
 )
 
 ZSH_CUSTOM=/home/kory/.zsh
 ZSH_THEME="minimal-fork"
 
-ZSH_TMUX_AUTOSTART="true"
-ZSH_TMUX_AUTOCONNECT="false"
-
 HYPHEN_INSENSITIVE="true"
+
+#ZSH_TMUX_AUTOSTART="true"
+#ZSH_TMUX_AUTOCONNECT="false"
 
 source $ZSH/oh-my-zsh.sh
 
+
+# Aliases
 alias l='ls -1 --color=auto'
 alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
