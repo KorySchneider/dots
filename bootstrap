@@ -3,35 +3,23 @@
 DOTS_DIR="$HOME/dots" # this script must be located here
 DOTFILE_DIRS=$(ls $DOTS_DIR)
 
-#Flags
-FONT_FLAG=""
 PKG_FLAG=""
 
 # Parse args
 while getopts "fp" flag; do
   case "${flag}" in
-    f) FONT_FLAG="true" ;;
     p) PKG_FLAG="true" ;;
   esac
 done
 
 # Packages
 if [ "$PKG_FLAG" == "true" ]; then
-  yaourt -Syu
-  yaourt -S --noconfirm stow vim compton rofi tmux i3-wm rxvt-unicode-256xresources i3blocks chromium feh evince nodejs npm
-fi
-
-# Fonts
-if [ "$FONT_FLAG" == "true" ]; then
-  if [ ! -d "$HOME/.fonts" ]; then
-    mkdir $HOME/.fonts
-  fi
-  git clone https://github.com/ryanoasis/nerd-fonts ~/.fonts/nerd-fonts
-  fc-cache -fv
+  sudo apt-get update
+  sudo apt-get upgrade
+  sudo apt install -y stow vim compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot
 fi
 
 # Dotfiles
-
 # Remove common pre-existing dotfiles before stowing
 rm "$HOME/.bashrc" -f
 rm "$HOME/.xinitrc" -f
@@ -43,5 +31,7 @@ for dir in $DOTFILE_DIRS; do
     stow $dir
   fi
 done
+
+hsetroot -solid "#282828"
 
 xrdb -merge ~/.Xresources

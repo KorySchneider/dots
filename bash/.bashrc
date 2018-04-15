@@ -21,8 +21,6 @@ alias py3='python3'
 
 alias slp='sleep 2; systemctl suspend && exit'
 
-alias sysupdate='yaourt -Syu --noconfirm'
-
 ##
 # functions
 ##
@@ -38,7 +36,6 @@ function parse_git_dirty {
 function parse_git_branch {
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-#
 
 ##
 # exports
@@ -61,7 +58,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ##
 # tmux
 ##
-[[ "$-" != *i* ]] && return
-if command -v tmux>/dev/null; then
-   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+#[[ "$-" != *i* ]] && return
+#if command -v tmux>/dev/null; then
+#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi

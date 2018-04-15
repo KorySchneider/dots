@@ -1,5 +1,6 @@
 *font: xft:ProggyCleanTT\ Nerd\ Font:size=11
-!*font: xft:Fura\ Code\ Nerd\ Font:size=10
+!*font: xft:mononoki\ Nerd\ Font:size=10
+!*font: xft:Noto\ Mono\ Nerd\ Font:size=10
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -54,7 +55,7 @@ URxvt*cursorColor:       #fbf1c7
 URxvt*colorUL:           #366060
 URxvt*underlineColor:    #dfaf8f
 
-URxvt*letterSpace:       1
+URxvt*letterSpace:       0
 
 URxvt*transparent:       false
 URxvt*shading:           25
@@ -70,3 +71,5 @@ URxvt*pointerBlankDelay: 2
 URxvt*scrollBar:         false
 URxvt*secondaryScroll:   true
 URxvt*borderless:        true
+
+URxvt.geometry: 85x60
