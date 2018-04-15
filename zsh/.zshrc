@@ -1,10 +1,12 @@
 export ZSH=/home/kory/.oh-my-zsh
+export PATH="$HOME/.node_modules_global/bin:$PATH"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 plugins=(
   git
   #tmux
   wd
+  ubuntu
 )
 
 ZSH_CUSTOM=/home/kory/.zsh
