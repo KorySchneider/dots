@@ -11,9 +11,13 @@ plugins=(
   tmux
 )
 
-ZSH_THEME="minimal-fork"
-HYPHEN_INSENSITIVE="true"
 ZSH_CUSTOM=/home/kory/.zsh
+ZSH_THEME="minimal-fork"
+
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOCONNECT="false"
+
+HYPHEN_INSENSITIVE="true"
 
 source $ZSH/oh-my-zsh.sh
 
