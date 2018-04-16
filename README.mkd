@@ -8,6 +8,7 @@ Feel free to use anything you find here.
 
 
 ### Screenshots
+*(outdated)*
 
 My window manager is a fork of i3 called i3-gaps. I'm using i3blocks for the bar.
 
