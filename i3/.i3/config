@@ -188,12 +188,13 @@ exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
 # Start floating
 for_window [class="Leafpad"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="URxvt"] floating enable
 for_window [class="Gdebi-gtk"] floating enable
 for_window [class="Wicd-client.py"] floating enable
 for_window [class="Engrampa"] floating enable
 
 # Floating window size constraints
-floating_minimum_size 600 x 400
+floating_minimum_size 300 x 150
 floating_maximum_size -1 x -1
 
 ##
@@ -246,7 +247,7 @@ bar {
 ##
 
 # disable window titlesbars entirely
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 8
 
 # set inner/outer gaps
 gaps inner 45
