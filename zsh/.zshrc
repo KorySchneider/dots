@@ -2,6 +2,16 @@ export ZSH=/home/kory/.oh-my-zsh
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
+# ^ this makes zsh start real slow. Use alias instead, before using nvm:
+alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
+  echo "Loading nvm..."; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh";\
+  echo "Loading nvm bash_completion..."; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion";\
+  echo "Done"'
+
 plugins=(
   git
   tmux
