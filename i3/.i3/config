@@ -191,7 +191,7 @@ exec --no-startup-id xset -b # disable bell
 # Start floating
 for_window [class="Thunar"] floating enable
 for_window [class="File-roller"] floating enable
-for_window [class="URxvt"] floating enable
+#for_window [class="URxvt"] floating enable
 
 # Floating window size constraints
 floating_minimum_size 380 x 100
@@ -226,7 +226,7 @@ bar {
   #status_command polybar bar
   position bottom
   tray_output primary
-  font xft:Noto Sans 12
+  font xft:DejaVu Sans 12
   workspace_buttons yes
   height 26
 

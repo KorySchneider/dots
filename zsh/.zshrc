@@ -4,7 +4,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 plugins=(
   git
-  #tmux
+  tmux
   wd
   ubuntu
 )
@@ -14,8 +14,8 @@ ZSH_THEME="minimal-fork"
 
 HYPHEN_INSENSITIVE="true"
 
-#ZSH_TMUX_AUTOSTART="true"
-#ZSH_TMUX_AUTOCONNECT="false"
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOCONNECT="false"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,5 +32,6 @@ alias npmr='npm run-script'
 alias py3='python3'
 
 alias slp='sleep 2; systemctl suspend && exit'
+alias pwroff='killall chrome && shutdown now'
 
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
