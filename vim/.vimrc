@@ -12,6 +12,7 @@ Plug 'mxw/vim-jsx'
 Plug 'gabrielelana/vim-markdown'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
+Plug 'posva/vim-vue'
 
 " Tools
 Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1
