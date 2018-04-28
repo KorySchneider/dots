@@ -32,7 +32,7 @@ fi
 ##
 # Fonts
 ##
-if ["$FONT_FLAG" == "true" ]; then
+if [ "$FONT_FLAG" == "true" ]; then
   add_font() {
     # url is a link to a .zip file download with font files somewhere in it
     # (this was written with nerdfonts.com in mind)
@@ -41,8 +41,8 @@ if ["$FONT_FLAG" == "true" ]; then
     wget "$1"
 
     # get zip filename and folder to extract to
-    zip_file=echo "$1" | rev | cut -d "/" -f 1 | rev
-    folder_name=echo "$zip_file" | cut -d "." -f 1
+    zip_file=$(echo "$1" | rev | cut -d "/" -f 1 | rev)
+    folder_name=$(echo "$zip_file" | cut -d "." -f 1)
 
     # unzip font files
     unzip "$zip_file" -d "$folder_name"
