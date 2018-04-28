@@ -59,7 +59,7 @@ if [ "$FONT_FLAG" == "true" ]; then
   add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/ProggyClean.zip"
   add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Mononoki.zip"
   add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/FiraCode.zip"
-  add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Noto.zip"
+  #add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Noto.zip"
 
   # Update font cache
   fc-cache -fv
