@@ -1,13 +1,87 @@
 #!/bin/bash
 
-path="$HOME/dots"
+# This script will stow all folders in the directory this file is located in.
+# If run with the -p flag, it will install a bunch of packages necessary
+# for my personal linux setup.
 
-dotfile_dirs=$(ls $path)
+# This script and the dots folder must be located here
+DOTS_DIR="$HOME/dots"
 
-for dir in $dotfile_dirs
-do
-  if [ "$dir" != "bootstrap" ]
-  then
+DOTFILE_DIRS=$(ls $DOTS_DIR)
+
+PKG_FLAG=""
+FONT_FLAG=""
+
+# Parse args
+while getopts "fp" flag; do
+  case "${flag}" in
+    f) FONT_FLAG="true" ;;
+    p) PKG_FLAG="true" ;;
+  esac
+done
+
+##
+# Packages
+##
+if [ "$PKG_FLAG" == "true" ]; then
+  sudo apt-get update
+  sudo apt-get upgrade
+  sudo apt install -y stow vim compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot fonts-font-awesome
+fi
+
+##
+# Fonts
+##
+if [ "$FONT_FLAG" == "true" ]; then
+  add_font() {
+    # url is a link to a .zip file download with font files somewhere in it
+    # (this was written with nerdfonts.com in mind)
+
+    # download font files (we should already be in .fonts dir)
+    wget "$1"
+
+    # get zip filename and folder to extract to
+    zip_file=$(echo "$1" | rev | cut -d "/" -f 1 | rev)
+    folder_name=$(echo "$zip_file" | cut -d "." -f 1)
+
+    # unzip font files
+    unzip "$zip_file" -d "$folder_name"
+
+    # clean up zip file
+    rm "$zip_file" -f
+  }
+
+  # Go to user's fonts directory
+  mkdir $HOME/.fonts -p
+  cd $HOME/.fonts
+
+  # Fonts to grab
+  add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/ProggyClean.zip"
+  add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Mononoki.zip"
+  add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/FiraCode.zip"
+  #add_font "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Noto.zip"
+
+  # Update font cache
+  fc-cache -fv
+fi
+
+##
+# Dotfiles
+##
+# Remove common pre-existing dotfiles before stowing
+rm "$HOME/.bashrc" -f
+rm "$HOME/.xinitrc" -f
+rm "$HOME/.Xresources" -f
+
+# Stow
+for dir in $DOTFILE_DIRS; do
+  if [ "$dir" != "bootstrap" ]; then # skip this file
     stow $dir
   fi
 done
+
+# Set background
+hsetroot -solid "#282828"
+
+# Apply Xresources
+xrdb -merge ~/.Xresources
