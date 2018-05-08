@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# This script will stow all folders in the directory this file is located in.
-# If run with the -p flag, it will install a bunch of packages necessary
-# for my personal linux setup.
-
-# This script and the dots folder must be located here
+# This script and the dotfile folders must be located here:
 DOTS_DIR="$HOME/dots"
-
-DOTFILE_DIRS=$(ls $DOTS_DIR)
 
 DOTS_FLAG=""
 PKG_FLAG=""
@@ -34,10 +28,26 @@ fi
 if [ "$PKG_FLAG" == "true" ]; then
   sudo apt-get update
   sudo apt-get upgrade
-  sudo apt install -y stow vim-gtk3 compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot fonts-font-awesome zsh
+  sudo apt install -y stow vim-gtk3 compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot fonts-font-awesome zsh curl
 
   # oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+  # i3-gaps
+  # dependencies for ubuntu 16.10+
+  sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake
+
+  cd "$HOME"
+  mkdir git
+  cd git
+  git clone https://www.github.com/Airblader/i3 i3-gaps
+  cd i3-gaps
+  autoreconf --force --install
+  rm -rf build/
+  mkdir -p build && cd build/
+  ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+  make
+  sudo make install
 fi
 
 ##
@@ -80,13 +90,16 @@ fi
 # Dotfiles
 ##
 if [ "$FONT_FLAG" == "true" ]; then
+  dotfile_dirs=$(ls $DOTS_DIR)
+
   # Remove common pre-existing dotfiles before stowing
-  mv "$HOME/.bashrc" "$HOME/.bashrc.backup"
-  mv "$HOME/.xinitrc" "$HOME/.xinitrc.backup"
-  mv "$HOME/.Xresources" "$HOME/.Xresources.backup"
+  mv "$HOME/.bashrc" "$HOME/.bashrc.old"
+  mv "$HOME/.xinitrc" "$HOME/.xinitrc.old"
+  mv "$HOME/.Xresources" "$HOME/.Xresources.old"
+  mv "$HOME/.zshrc" "$HOME/.zshrc.old"
 
   # Stow
-  for dir in $DOTFILE_DIRS; do
+  for dir in $dotfile_dirs; do
     if [ "$dir" != "bootstrap" ]; then # skip this file
       stow $dir
     fi
