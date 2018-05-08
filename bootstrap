@@ -9,16 +9,23 @@ DOTS_DIR="$HOME/dots"
 
 DOTFILE_DIRS=$(ls $DOTS_DIR)
 
+DOTS_FLAG=""
 PKG_FLAG=""
 FONT_FLAG=""
 
 # Parse args
-while getopts "fp" flag; do
+while getopts "fpd" flag; do
   case "${flag}" in
+    d) DOTS_FLAG="true" ;;
     f) FONT_FLAG="true" ;;
     p) PKG_FLAG="true" ;;
   esac
 done
+
+if [ "$PKG_FLAG" == "" ] && [ "$DOTS_FLAG" == "" ] && [ "$FONT_FLAG" == "" ]; then
+  echo "Usage: $ ./bootstrap -f(onts) -p(ackages) -d(otfiles)"
+  echo "On new setup run with all options: $ sudo ./bootstrap -fpd"
+fi
 
 ##
 # Packages
@@ -26,7 +33,7 @@ done
 if [ "$PKG_FLAG" == "true" ]; then
   sudo apt-get update
   sudo apt-get upgrade
-  sudo apt install -y stow vim compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot fonts-font-awesome
+  sudo apt install -y stow vim-gtk3 compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot fonts-font-awesome zsh
 fi
 
 ##
@@ -68,20 +75,22 @@ fi
 ##
 # Dotfiles
 ##
-# Remove common pre-existing dotfiles before stowing
-rm "$HOME/.bashrc" -f
-rm "$HOME/.xinitrc" -f
-rm "$HOME/.Xresources" -f
+if [ "$FONT_FLAG" == "true" ]; then
+  # Remove common pre-existing dotfiles before stowing
+  rm "$HOME/.bashrc" -f
+  rm "$HOME/.xinitrc" -f
+  rm "$HOME/.Xresources" -f
 
-# Stow
-for dir in $DOTFILE_DIRS; do
-  if [ "$dir" != "bootstrap" ]; then # skip this file
-    stow $dir
-  fi
-done
+  # Stow
+  for dir in $DOTFILE_DIRS; do
+    if [ "$dir" != "bootstrap" ]; then # skip this file
+      stow $dir
+    fi
+  done
 
-# Set background
-hsetroot -solid "#282828"
+  # Set background
+  hsetroot -solid "#282828"
 
-# Apply Xresources
-xrdb -merge ~/.Xresources
+  # Apply Xresources
+  xrdb -merge ~/.Xresources
+fi
