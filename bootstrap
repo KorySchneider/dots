@@ -81,9 +81,9 @@ fi
 ##
 if [ "$FONT_FLAG" == "true" ]; then
   # Remove common pre-existing dotfiles before stowing
-  rm "$HOME/.bashrc" -f
-  rm "$HOME/.xinitrc" -f
-  rm "$HOME/.Xresources" -f
+  mv "$HOME/.bashrc" "$HOME/.bashrc.backup"
+  mv "$HOME/.xinitrc" "$HOME/.xinitrc.backup"
+  mv "$HOME/.Xresources" "$HOME/.Xresources.backup"
 
   # Stow
   for dir in $DOTFILE_DIRS; do
