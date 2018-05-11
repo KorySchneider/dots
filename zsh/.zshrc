@@ -7,6 +7,7 @@ plugins=(
   tmux
   wd
   ubuntu
+  sudo
 )
 
 ZSH_CUSTOM=/home/kory/.zsh
@@ -36,5 +37,6 @@ alias slp='sleep 2; systemctl suspend && exit'
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
 
 alias wifireboot='sudo systemctl restart network-manager.service && echo "Rebooting network manager..."'

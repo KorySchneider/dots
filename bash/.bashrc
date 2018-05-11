@@ -46,3 +46,7 @@ export NVM_DIR="/home/kory/.nvm"
 
 [[ -s "/home/kory/.gvm/scripts/gvm" ]] && source "/home/kory/.gvm/scripts/gvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''
