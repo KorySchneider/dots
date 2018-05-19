@@ -6,7 +6,7 @@
 	default = simple
 [alias]
 	ch = checkout
-	s = status
+	s = status -s
   d = diff
 	cm = commit
 	b = branch

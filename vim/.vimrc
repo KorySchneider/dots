@@ -23,6 +23,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'koryschneider/vim-trim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Townk/vim-autoclose'
 
 call plug#end()
 
