@@ -58,7 +58,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ##
 # tmux
 ##
-#[[ "$-" != *i* ]] && return
-#if command -v tmux>/dev/null; then
-#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-#fi
+[[ "$-" != *i* ]] && return
+if command -v tmux>/dev/null; then
+   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
