@@ -26,8 +26,8 @@ fi
 # Packages
 ##
 if [ "$PKG_FLAG" == "true" ]; then
-  sudo apt-get update
-  sudo apt-get upgrade
+  sudo apt-get update -y
+  sudo apt-get upgrade -y
   sudo apt install -y stow vim-gtk3 compton rofi tmux i3 rxvt-unicode-256color i3blocks chromium-browser feh evince nodejs npm hsetroot fonts-font-awesome zsh curl
 
   # oh-my-zsh
@@ -89,7 +89,7 @@ fi
 ##
 # Dotfiles
 ##
-if [ "$FONT_FLAG" == "true" ]; then
+if [ "$DOTS_FLAG" == "true" ]; then
   dotfile_dirs=$(ls $DOTS_DIR)
 
   # Remove common pre-existing dotfiles before stowing
