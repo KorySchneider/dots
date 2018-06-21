@@ -140,7 +140,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'really exit?' -b 'Yes, do the thing' 'killall chrome && i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'really exit?' -b 'Yes, do the thing' 'i3-msg exit'"
 
 ##
 # Resize
@@ -175,7 +175,7 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-#exec --no-startup-id hsetroot -fill ~/Dropbox/walls/books-blur.jpg
+#exec --no-startup-id hsetroot -fill ~/Dropbox/walls/outrun.jpg
 exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
 exec --no-startup-id unclutter -root

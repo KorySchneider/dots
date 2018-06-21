@@ -1,6 +1,8 @@
 export ZSH=/home/kory/.oh-my-zsh
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
 
 plugins=(
   git
@@ -40,3 +42,5 @@ alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
 alias wifireboot='sudo systemctl restart network-manager.service && echo "Rebooting network manager..."'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
