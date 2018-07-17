@@ -12,6 +12,7 @@ Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'gabrielelana/vim-markdown'
+Plug 'suan/vim-instant-markdown'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'posva/vim-vue'
