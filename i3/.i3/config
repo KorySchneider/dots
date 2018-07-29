@@ -225,7 +225,7 @@ bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
   position bottom
   tray_output primary
-  font xft:DejaVu Sans 12
+  font xft:Roboto 12
   workspace_buttons yes
   height 30
 

@@ -1,5 +1,4 @@
-!*font: xft:Fura\ Code\ Nerd\ Font:size=11
-*font: xft:ProggyCleanTT\ Nerd\ Font:size=12
+*font: xft:Roboto\ Mono\ Nerd\ Font:size=10
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -40,7 +39,7 @@ rofi.fg:       #282828
 rofi.hlbg:     #8ec07c
 rofi.hlfg:     #282828
 
-rofi.font:     DejaVu Sans 14
+rofi.font:     Roboto 14
 
 ! ------------------------------------------------------- URxvt
 URxvt*termName:          rxvt-256color
@@ -50,7 +49,7 @@ URxvt*cursorColor:       #fbf1c7
 URxvt*colorUL:           #366060
 URxvt*underlineColor:    #dfaf8f
 
-URxvt*letterSpace:       0
+URxvt*letterSpace:       1
 
 URxvt*transparent:       false
 URxvt*shading:           25
