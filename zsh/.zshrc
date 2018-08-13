@@ -59,3 +59,5 @@ alias vimrc='vim ~/.vimrc'
 alias wifireboot='sudo systemctl restart network-manager.service && echo "Rebooting network manager..."'
 
 alias dcom='docker-compose'
+
+alias li='xbacklight -set'
