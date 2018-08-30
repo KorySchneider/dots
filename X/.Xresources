@@ -66,5 +66,6 @@ URxvt*pointerBlankDelay: 2
 URxvt*scrollBar:         false
 URxvt*secondaryScroll:   true
 URxvt*borderless:        true
+URxvt.internalBorder:    10
 
 URxvt.geometry: 90x55
