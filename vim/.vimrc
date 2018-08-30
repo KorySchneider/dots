@@ -2,13 +2,13 @@
 call plug#begin('~/.vim/plugged')
 
 " UI
-Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/goyo.vim' | let g:goyo_width = 85
 Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
 
 " Syntax highlighting
+Plug 'morhetz/gruvbox'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'gabrielelana/vim-markdown'

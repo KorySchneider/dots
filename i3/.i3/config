@@ -175,7 +175,6 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-#exec --no-startup-id hsetroot -fill ~/Dropbox/walls/outrun.jpg
 exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
 exec --no-startup-id unclutter -root
@@ -188,7 +187,6 @@ exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
 # Start floating
 for_window [class="Leafpad"] floating enable
 for_window [class="Thunar"] floating enable
-#for_window [class="URxvt"] floating enable
 for_window [class="Gdebi-gtk"] floating enable
 for_window [class="Wicd-client.py"] floating enable
 for_window [class="Engrampa"] floating enable
