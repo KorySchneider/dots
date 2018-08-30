@@ -33,7 +33,7 @@ SSID=$(iwgetid -r)
 
 #------------------------------------------------------------------------
 
-echo $QUALITY% \- $SSID # full text
+echo $QUALITY% $SSID # full text
 echo $QUALITY% # short text
 
 ## color
