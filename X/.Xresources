@@ -1,5 +1,5 @@
 !*font: xft:ProggyCleanTT\ Nerd\ Font:size=12
-*font: xft:SFMono\ Nerd\ Font:size=10
+*font: xft:SFMono\ Nerd\ Font:size=9
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
