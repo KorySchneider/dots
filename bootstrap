@@ -92,11 +92,11 @@ fi
 if [ "$DOTS_FLAG" == "true" ]; then
   dotfile_dirs=$(ls $DOTS_DIR)
 
-  # Remove common pre-existing dotfiles before stowing
-  mv "$HOME/.bashrc" "$HOME/.bashrc.old"
-  mv "$HOME/.xinitrc" "$HOME/.xinitrc.old"
-  mv "$HOME/.Xresources" "$HOME/.Xresources.old"
-  mv "$HOME/.zshrc" "$HOME/.zshrc.old"
+  # Remove common pre-existing dotfiles before stowing, if they exist
+  [ -f "$HOME/.bashrc" ] && mv "$HOME/.bashrc" "$HOME/.bashrc.old"
+  [ -f "$HOME/.xinitrc" ] && mv "$HOME/.xinitrc" "$HOME/.xinitrc.old"
+  [ -f "$HOME/.Xresources" ] && mv "$HOME/.Xresources" "$HOME/.Xresources.old"
+  [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old"
 
   # Stow
   for dir in $dotfile_dirs; do

@@ -1,6 +1,6 @@
 export ZSH=/home/kory/.oh-my-zsh
-export PATH="$HOME/.node_modules_global/bin:$PATH"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
 
 plugins=(
@@ -36,6 +36,8 @@ alias pwroff='killall chrome && shutdown now'
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
+
+eval "$(hub alias -s)"
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
