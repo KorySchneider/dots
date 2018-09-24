@@ -195,7 +195,9 @@ for_window [class="File-roller"] floating enable
 for_window [class="Leafpad"] floating enable
 for_window [class="discover"] floating enable
 for_window [class="lxappearance"] floating enable
-for_window [class="grub-customizer"] floating enable
+for_window [class="Grub-customizer"] floating enable
+for_window [class="Engrampa"] floating enable
+for_window [class="Steam"] floating enable
 
 # Floating window size constraints
 floating_minimum_size 380 x 100
@@ -225,27 +227,30 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # Bar
 ##
 
-bar {
-  status_command i3blocks -c ~/.i3/i3blocks.conf
-  #status_command polybar bar
-  position bottom
-  tray_output primary
-  font xft:DejaVu Sans 12
-  workspace_buttons yes
-  height 26
+# polybar
+exec_always --no-startup-id polybar bar
 
-  colors {
-    background  $bg-color
-    separator   $bg-color
-    statusline  $text-color
-
-    #                   border             bg               text
-    focused_workspace  $bg-color          $bg-color          $text-color
-    active_workspace   $bg-color          $bg-color          $text-color
-    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-  }
-}
+# i3 blocks
+#bar {
+#  status_command i3blocks -c ~/.i3/i3blocks.conf
+#  position bottom
+#  tray_output primary
+#  font xft:DejaVu Sans 12
+#  workspace_buttons yes
+#  height 26
+#
+#  colors {
+#    background  $bg-color
+#    separator   $bg-color
+#    statusline  $text-color
+#
+#    #                   border             bg               text
+#    focused_workspace  $bg-color          $bg-color          $text-color
+#    active_workspace   $bg-color          $bg-color          $text-color
+#    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#  }
+#}
 
 ##
 # Settings for i3-gaps
@@ -255,7 +260,7 @@ bar {
 for_window [class="^.*"] border pixel 8
 
 # set inner/outer gaps
-gaps inner 25
+gaps inner 50
 gaps outer 0
 
 # smart gaps (gaps used if only more than one container on the workspace)
