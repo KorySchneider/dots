@@ -177,7 +177,6 @@ bindsym $mod+r mode "resize"
 ##
 
 # Launch on startup
-#exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 -r 119.98
 exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 -r 144
 exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
@@ -228,29 +227,29 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 ##
 
 # polybar
-exec_always --no-startup-id polybar bar
+#exec_always --no-startup-id polybar bar
 
 # i3 blocks
-#bar {
-#  status_command i3blocks -c ~/.i3/i3blocks.conf
-#  position bottom
-#  tray_output primary
-#  font xft:DejaVu Sans 12
-#  workspace_buttons yes
-#  height 26
-#
-#  colors {
-#    background  $bg-color
-#    separator   $bg-color
-#    statusline  $text-color
-#
-#    #                   border             bg               text
-#    focused_workspace  $bg-color          $bg-color          $text-color
-#    active_workspace   $bg-color          $bg-color          $text-color
-#    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#  }
-#}
+bar {
+  status_command i3blocks -c ~/.i3/i3blocks.conf
+  position bottom
+  tray_output primary
+  font xft:DejaVu Sans 12
+  workspace_buttons yes
+  height 26
+
+  colors {
+    background  $bg-color
+    separator   $bg-color
+    statusline  $text-color
+
+    #                   border             bg               text
+    focused_workspace  $bg-color          $bg-color          $text-color
+    active_workspace   $bg-color          $bg-color          $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
+}
 
 ##
 # Settings for i3-gaps
