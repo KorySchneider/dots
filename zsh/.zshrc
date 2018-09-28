@@ -2,6 +2,7 @@ export ZSH=/home/kory/.oh-my-zsh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
+export PATH=$PATH:~/scripts
 
 plugins=(
   git
