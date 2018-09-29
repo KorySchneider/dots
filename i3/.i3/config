@@ -190,6 +190,8 @@ for_window [class="Thunar"] floating enable
 for_window [class="Gdebi-gtk"] floating enable
 for_window [class="Wicd-client.py"] floating enable
 for_window [class="Engrampa"] floating enable
+for_window [window_role="pop-up"] floating enable
+no_focus [window_role="pop-up"]
 
 # Floating window size constraints
 floating_minimum_size 300 x 150

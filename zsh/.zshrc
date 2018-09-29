@@ -61,3 +61,7 @@ alias wifireboot='sudo systemctl restart network-manager.service && echo "Reboot
 alias dcom='docker-compose'
 
 alias li='xbacklight -set'
+
+alias arc='/usr/bin/chromium-browser --profile-directory=Default --app-id=hgmloofddffdnphfgcellkdfbfbjeloo'
+
+eval "$(hub alias -s)"
