@@ -9,12 +9,13 @@ Plug 'junegunn/goyo.vim' | let g:goyo_width = 85
 Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
 
 " Syntax highlighting
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'gabrielelana/vim-markdown'
-Plug 'fatih/vim-go'
-Plug 'rust-lang/rust.vim'
-Plug 'posva/vim-vue'
+Plug 'sheerun/vim-polyglot'
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"Plug 'gabrielelana/vim-markdown'
+"Plug 'fatih/vim-go'
+"Plug 'rust-lang/rust.vim'
+"Plug 'posva/vim-vue'
 
 " Tools
 Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1

@@ -72,4 +72,4 @@ URxvt*scrollBar:         false
 URxvt*secondaryScroll:   true
 URxvt*borderless:        true
 
-URxvt.geometry: 85x60
+URxvt.geometry: 85x35
