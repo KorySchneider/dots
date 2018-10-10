@@ -16,6 +16,7 @@ Plug 'suan/vim-instant-markdown'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'posva/vim-vue'
+Plug 'sudar/vim-arduino-syntax'
 
 " Tools
 Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1
