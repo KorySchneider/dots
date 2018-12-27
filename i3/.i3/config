@@ -48,7 +48,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # launch browser
-bindsym $mod+c exec chromium-browser
+bindsym $mod+c exec firefox
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -180,7 +180,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 -r 144
 exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
-exec --no-startup-id unclutter
+exec --no-startup-id unclutter -root
 exec --no-startup-id compton -b -c --config ~/.compton.conf
 exec --no-startup-id dropbox start
 exec --no-startup-id ~/scripts/screenblank

@@ -2,7 +2,7 @@ export ZSH=/home/kory/.oh-my-zsh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
-export PATH=$PATH:~/scripts
+export PATH="$PATH:/home/kory/scripts"
 
 plugins=(
   git
@@ -30,6 +30,7 @@ alias please='sudo $(fc -ln -1)'
 
 alias npmr='npm run-script'
 alias py3='python3'
+alias pip='pip3'
 
 alias slp='sleep 2; systemctl suspend && exit'
 alias pwroff='killall chrome && shutdown now'

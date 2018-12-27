@@ -7,15 +7,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/goyo.vim' | let g:goyo_width = 85
 Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
+Plug 'haya14busa/incsearch.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'
-"Plug 'pangloss/vim-javascript'
-"Plug 'mxw/vim-jsx'
-"Plug 'gabrielelana/vim-markdown'
-"Plug 'fatih/vim-go'
-"Plug 'rust-lang/rust.vim'
-"Plug 'posva/vim-vue'
 
 " Tools
 Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1
@@ -25,6 +21,7 @@ Plug 'koryschneider/vim-trim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
 
@@ -68,17 +65,34 @@ colorscheme gruvbox
 
 "" Custom Bindings
 let mapleader=","
-" (tr)ee
-map <silent> <leader>tr :NERDTreeToggle<CR>
-" (c)lear (s)earch
+
+" ctrl+T NerdTree toggle
+map <silent> <c-t> :NERDTreeToggle<CR>
+" goyo
+map <silent> <c-g> :Goyo<CR>
+" , (c)lear (s)earch
 nnoremap <silent> <leader>cs :nohl<CR>
-" (ta)b guides
+" , (ta)b guides
 nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
-" (sp)ell check
+" , (sp)ell check
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
+
 nnoremap ; :
 inoremap kj <Esc>
 set timeoutlen=250
+
+" incsearch.vim
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 "" File specific settings
 autocmd filetype python set tabstop=4 shiftwidth=4
