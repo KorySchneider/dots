@@ -1,3 +1,4 @@
+export PATH="$HOME/scripts:$PATH"
 export ZSH=/home/kory/.oh-my-zsh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

@@ -10,6 +10,7 @@ Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
 " Syntax highlighting
 Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
+Plug 'leafOfTree/vim-vue-plugin'
 
 " Tools
 Plug 'justinmk/vim-sneak' | let g:sneak#s_next = 1
@@ -19,6 +20,7 @@ Plug 'koryschneider/vim-trim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
 
