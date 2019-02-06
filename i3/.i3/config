@@ -48,7 +48,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # launch browser
-bindsym $mod+c exec firefox
+bindsym $mod+c exec chromium-browser
 
 # kill focused window
 bindsym $mod+Shift+q kill
