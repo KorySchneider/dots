@@ -26,6 +26,9 @@ bindsym $mod+Return exec urxvt
 # launch browser
 bindsym $mod+c exec chromium-browser
 
+# launch file browser
+bindsym $mod+e exec thunar
+
 # launch spotify
 bindsym $mod+m exec spotify
 
@@ -64,9 +67,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+t layout tabbed
+bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
