@@ -3,6 +3,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
 export PATH="$PATH:/home/kory/scripts"
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 plugins=(
   git
@@ -52,3 +53,5 @@ alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
   echo "Done"'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

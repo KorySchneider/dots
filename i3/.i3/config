@@ -47,6 +47,12 @@ floating_modifier $mod
 # launch terminal
 bindsym $mod+Return exec urxvt
 
+# launch file browser
+bindsym $mod+e exec thunar
+
+# launch archive manager
+bindsym $mod+z exec engrampa
+
 # launch browser
 bindsym $mod+c exec chromium-browser
 
@@ -269,7 +275,7 @@ bar {
 for_window [class="^.*"] border pixel 10
 
 # set inner/outer gaps
-gaps inner 50
+gaps inner 40
 gaps outer 0
 
 # smart gaps (gaps used if only more than one container on the workspace)
