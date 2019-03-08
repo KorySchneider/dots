@@ -83,12 +83,9 @@ nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 
 " FZF
-" ctrl+f files
 map <silent> <c-f> :Files<CR>
-" ctrl+h horizontal split
-" ctrl+i vertical split
-map <silent> <c-h> :sp<CR>:Files<CR>
-map <silent> <c-i> :vsp<CR>:Files<CR>
+map <silent> <c-s> :vsp<CR>:Files<CR>
+map <silent> <c-i> :sp<CR>:Files<CR>
 
 nnoremap ; :
 inoremap kj <Esc>

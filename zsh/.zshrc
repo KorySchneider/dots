@@ -29,6 +29,8 @@ alias la='ls -a --color=auto'
 
 alias please='sudo $(fc -ln -1)'
 
+alias fim='vim $(fzf --height 10%)'
+
 alias npmr='npm run-script'
 alias py3='python3'
 alias pip='pip3'
@@ -55,3 +57,6 @@ alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
