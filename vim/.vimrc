@@ -1,3 +1,5 @@
+set rtp+=~/.fzf
+
 "" Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -23,6 +25,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-eunuch'
 Plug 'Townk/vim-autoclose'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -78,6 +82,14 @@ nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 " , (sp)ell check
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 
+" FZF
+" ctrl+f files
+map <silent> <c-f> :Files<CR>
+" ctrl+h horizontal split
+" ctrl+i vertical split
+map <silent> <c-h> :sp<CR>:Files<CR>
+map <silent> <c-i> :vsp<CR>:Files<CR>
+
 nnoremap ; :
 inoremap kj <Esc>
 set timeoutlen=250
@@ -100,3 +112,22 @@ autocmd filetype python set tabstop=4 shiftwidth=4
 autocmd filetype gitcommit setlocal spell textwidth=72
 autocmd filetype rust set tabstop=4 shiftwidth=4
 autocmd filetype markdown setlocal spell textwidth=80
+
+" fzf colors
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~15%' }
