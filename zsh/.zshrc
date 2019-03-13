@@ -69,3 +69,5 @@ alias li='xbacklight -set'
 alias arc='/usr/bin/chromium-browser --profile-directory=Default --app-id=hgmloofddffdnphfgcellkdfbfbjeloo'
 
 eval "$(hub alias -s)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

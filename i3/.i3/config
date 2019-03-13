@@ -29,6 +29,9 @@ bindsym $mod+c exec chromium-browser
 # launch file browser
 bindsym $mod+e exec thunar
 
+# launch archive manager
+bindsym $mod+z exec engrampa
+
 # launch spotify
 bindsym $mod+m exec spotify
 
