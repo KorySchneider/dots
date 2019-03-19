@@ -30,9 +30,6 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-# note: i3 has their horizontal/vertical splits mixed up
-# these are intuitively correct
-#
 # vertical split mode
 bindsym $mod+semicolon split h
 # horizontal split mode
@@ -43,33 +40,6 @@ bindsym $mod+f fullscreen toggle
 
 # use Mouse+$mod to drag floating windows
 floating_modifier $mod
-
-# launch terminal
-bindsym $mod+Return exec urxvt
-
-# launch file browser
-bindsym $mod+e exec thunar
-
-# launch archive manager
-bindsym $mod+z exec engrampa
-
-# launch browser
-bindsym $mod+c exec chromium-browser
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# launch rofi
-bindsym $mod+d exec rofi -show run
-
-# launch rofi window switcher
-bindsym $mod+w exec rofi -show window
-
-# launch spotify
-bindsym $mod+m exec spotify
-
-# lock screen
-bindsym $mod+Shift+BackSpace exec lock
 
 # change container layout
 bindsym $mod+Shift+s layout stacking
@@ -182,6 +152,33 @@ bindsym $mod+r mode "resize"
 # Applications
 ##
 
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# terminal
+bindsym $mod+Return exec urxvt
+
+# file browser
+bindsym $mod+e exec thunar
+
+# archive manager
+bindsym $mod+z exec engrampa
+
+# browser
+bindsym $mod+c exec chromium-browser
+
+# rofi
+bindsym $mod+d exec rofi -show run
+
+# rofi window switcher
+bindsym $mod+w exec rofi -show window
+
+# spotify
+bindsym $mod+m exec spotify
+
+# lock screen
+bindsym $mod+Shift+BackSpace exec lock
+
 # Launch on startup
 exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 -r 144
 exec --no-startup-id hsetroot -solid "#282828"
@@ -195,7 +192,6 @@ exec --no-startup-id xset m 0/1 4 # mouse sens
 exec --no-startup-id xset -b # disable bell
 
 # Start floating
-for_window [class="Thunar"] floating enable
 for_window [class="File-roller"] floating enable
 for_window [class="Leafpad"] floating enable
 for_window [class="discover"] floating enable
@@ -216,7 +212,7 @@ floating_minimum_size 100 x 100
 floating_maximum_size -1 x -1
 
 # Popups during fullscreen (smart | leave_fullscreen)
-popup_during_fullscreen leave_fullscreen
+popup_during_fullscreen smart
 
 ##
 # Colors

@@ -83,7 +83,7 @@ nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 
 " FZF
-map <silent> <c-f> :Files<CR>
+map <silent> <c-o> :Files<CR>
 map <silent> <c-s> :vsp<CR>:Files<CR>
 map <silent> <c-i> :sp<CR>:Files<CR>
 
