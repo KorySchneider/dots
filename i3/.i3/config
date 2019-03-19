@@ -192,7 +192,6 @@ exec --no-startup-id xset m 0/1 4 # mouse sens
 exec --no-startup-id xset -b # disable bell
 
 # Start floating
-for_window [class="File-roller"] floating enable
 for_window [class="Leafpad"] floating enable
 for_window [class="discover"] floating enable
 for_window [class="lxappearance"] floating enable
@@ -200,7 +199,6 @@ for_window [class="Grub-customizer"] floating enable
 for_window [class="Engrampa"] floating enable
 for_window [class="Steam"] floating enable
 for_window [window_role="pop-up"] floating enable
-for_window [class="URxvt"] floating enable
 for_window [class="Twine"] floating enable
 
 # Don't steal focus when launched
