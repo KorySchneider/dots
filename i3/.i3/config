@@ -201,6 +201,7 @@ for_window [class="Steam"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [class="Twine"] floating enable
 for_window [class="URxvt"] floating enable
+for_window [class="Thunar"] floating enable
 
 # Don't steal focus when launched
 no_focus [window_role="pop-up"]
