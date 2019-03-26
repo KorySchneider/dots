@@ -27,11 +27,15 @@ alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
 
+f () {
+  local file=$(fzf --height 10%)
+  if [[ $file != "" ]]; then
+    vim $file
+  fi
+}
+
 alias please='sudo $(fc -ln -1)'
 
-alias fim='vim $(fzf --height 10%)'
-
-alias npmr='npm run-script'
 alias py3='python3'
 alias pip='pip3'
 
@@ -41,6 +45,8 @@ alias pwroff='killall chrome && shutdown now'
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
+
+alias ick='ack -i'
 
 eval "$(hub alias -s)"
 
