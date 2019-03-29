@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /home/kory/.steam/steam/steamapps/common/Aseprite/aseprite
