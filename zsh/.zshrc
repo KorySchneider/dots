@@ -45,6 +45,7 @@ alias pwroff='killall chrome && shutdown now'
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
 
 alias ick='ack -i'
 
