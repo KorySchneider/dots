@@ -1,34 +1,15 @@
-export PATH="$HOME/scripts:$PATH"
 export ZSH=/home/kory/.oh-my-zsh
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH="$HOME/.node_modules_global/bin:$PATH"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export GEM_HOME="$HOME/.gems"
-export PATH="$HOME/.gems/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-# lazy load nvm
-if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(whence -w __init_nvm)" = function ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-  declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
-  function __init_nvm() {
-    for i in "${__node_commands[@]}"; do unalias $i; done
-    . "$NVM_DIR"/nvm.sh
-    unset __node_commands
-    unset -f __init_nvm
-  }
-  for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
-fi
+export PATH="$HOME/.node_modules_global/bin:$PATH"
+export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
+export PATH="$PATH:/home/kory/scripts"
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 plugins=(
   git
   tmux
   wd
   ubuntu
-  sudo
 )
 
 ZSH_CUSTOM=/home/kory/.zsh
@@ -41,33 +22,48 @@ ZSH_TMUX_AUTOCONNECT="false"
 
 source $ZSH/oh-my-zsh.sh
 
-
-# Aliases
 alias l='ls -1 --color=auto'
 alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
 
+f () {
+  local file=$(fzf --height 10%)
+  if [[ $file != "" ]]; then
+    vim $file
+  fi
+}
+
 alias please='sudo $(fc -ln -1)'
 
-alias npmr='npm run-script'
-alias py3='python3.6'
+alias py3='python3'
+alias pip='pip3'
 
 alias slp='sleep 2; systemctl suspend && exit'
+alias pwroff='killall chrome && shutdown now'
 
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
-alias wifireboot='sudo systemctl restart network-manager.service && echo "Rebooting network manager..."'
-
-alias dcom='docker-compose'
-
-alias li='xbacklight -set'
-
-alias arc='/usr/bin/chromium-browser --profile-directory=Default --app-id=hgmloofddffdnphfgcellkdfbfbjeloo'
+alias ick='ack -i'
 
 eval "$(hub alias -s)"
 
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
+# ^ this makes zsh start real slow. Use alias instead, before using nvm:
+alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
+  echo "Loading nvm..."; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh";\
+  echo "Loading nvm bash_completion..."; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion";\
+  echo "Done"'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon

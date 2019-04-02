@@ -1,11 +1,12 @@
 set rtp+=~/.fzf
 
-"" Plugins
+" Plugins
 call plug#begin('~/.vim/plugged')
 
 " UI
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes' | let g:airline_theme='gruvbox'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/goyo.vim' | let g:goyo_width = 85
 Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
@@ -30,7 +31,7 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-"" General Settings
+" General Settings
 set nocompatible
 set mouse=a
 set title
@@ -64,11 +65,11 @@ set noerrorbells
 filetype plugin indent on
 syntax enable
 
-"" Theme
+" Theme
 set background=dark
 colorscheme gruvbox
 
-"" Custom Bindings
+" Custom Bindings
 let mapleader=","
 
 " ctrl+T NerdTree toggle
@@ -83,9 +84,10 @@ nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
 
 " FZF
-map <silent> <c-f> :Files<CR>
+map <silent> <c-o> :Files<CR>
 map <silent> <c-s> :vsp<CR>:Files<CR>
 map <silent> <c-i> :sp<CR>:Files<CR>
+map <silent> <c-f> :Lines<CR>
 
 nnoremap ; :
 inoremap kj <Esc>
@@ -104,7 +106,7 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-"" File specific settings
+" File specific settings
 autocmd filetype python set tabstop=4 shiftwidth=4
 autocmd filetype gitcommit setlocal spell textwidth=72
 autocmd filetype rust set tabstop=4 shiftwidth=4
