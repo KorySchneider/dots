@@ -53,7 +53,7 @@ eval "$(hub alias -s)"
 
 alias li='xbacklight -set'
 
-alias wifireboot='sudo systemctl restart network-manager.service'
+alias wifireboot='sudo systemctl restart network-manager.service && echo "Restarting network manager"'
 
 alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
   echo "Loading nvm..."; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh";\
