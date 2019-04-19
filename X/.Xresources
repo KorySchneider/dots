@@ -73,3 +73,6 @@ URxvt*secondaryScroll:   true
 URxvt*borderless:        true
 URxvt*internalBorder: 8
 URxvt.geometry: 85x55
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard

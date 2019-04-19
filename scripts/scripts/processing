@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /home/kory/app/processing3.4/processing
+exec /home/kory/app/processing-3.5.3/processing
