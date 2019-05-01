@@ -11,3 +11,4 @@
 	cm = commit
 	b = branch
 	cl = clone
+  unstage = reset -- 

@@ -7,6 +7,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 plugins=(
   git
+  gitfast
   tmux
   wd
   ubuntu
