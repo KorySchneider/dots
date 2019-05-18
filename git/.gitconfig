@@ -1,13 +1,8 @@
 [user]
-	email = kory.schneider@gmail.com
-	name = Kory Schneider
+  email = kory.schneider@gmail.com
+  name = Kory Schneider
+  username = KorySchneider
 [push]
-	default = simple
+  default = simple
 [alias]
-	ch = checkout
-	s = status
-	d = diff
-	cm = commit
-	cl = clone
-	b = branch
-	st = stash
+  unstage = reset -- 
