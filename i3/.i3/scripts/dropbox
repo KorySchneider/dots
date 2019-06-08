@@ -1,0 +1,22 @@
+#!/bin/bash
+OUTPUT=`dropbox status | head -1`
+TEXT=""
+
+if echo $OUTPUT | grep -q '^Up to date' ; then
+    COLOR="#EBDBB2" # white
+    TEXT=""
+else
+    if echo $OUTPUT | grep -q '^Dropbox isn' ; then
+        COLOR="#CC241D" # red
+        TEXT=""
+    else
+        COLOR="#83A598" # blue
+        TEXT=""
+    fi
+fi
+
+echo "<span foreground=\"$COLOR\">$TEXT</span>"
+
+case $BLOCK_BUTTON in
+  1) notify-send "Dropbox" "`dropbox status`" -t 1000 ;;
+esac
