@@ -65,5 +65,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
-stty -ixon
+stty -ixon # disable Ctrl-S Ctrl-Q in terminal

@@ -1,5 +1,6 @@
-*font: xft:ProggyCleanTT\ Nerd\ Font:size=12
-!*font: xft:SauceCodePro\ Nerd\ Font:size=10
+!*font: xft:ProggyCleanTT\ Nerd\ Font:size=12
+*font: xft:Knack\ Nerd\ Font:size=12
+!*font: xft:FuraCode\ Nerd\ Font:size=12
 
 ! ------------------------------------------------------- Colorscheme: Gruvbox
 *background: #282828
@@ -68,4 +69,7 @@ URxvt*secondaryScroll:   true
 URxvt*borderless:        true
 URxvt.internalBorder:    8
 
-URxvt.geometry: 90x35
+URxvt.geometry: 80x30
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
