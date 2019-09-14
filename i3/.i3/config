@@ -24,10 +24,10 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # launch browser
-bindsym $mod+c exec chromium-browser
+bindsym $mod+c exec brave-browser
 
 # launch file browser
-bindsym $mod+e exec thunar
+bindsym $mod+e exec nautilus
 
 # launch archive manager
 bindsym $mod+z exec engrampa
@@ -180,7 +180,7 @@ bindsym $mod+r mode "resize"
 # Applications
 ##
 
-# Launch on startup
+# Launch on startup/login
 exec --no-startup-id hsetroot -solid "#282828"
 exec --no-startup-id redshift
 exec --no-startup-id unclutter -root
@@ -189,14 +189,15 @@ exec --no-startup-id dropbox start
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
+exec --no-startup-id xinput set-prop 10 287 1
+exec --no-startup-id xinput set-prop 10 289 1
 
 # Start floating
 for_window [class="Leafpad"] floating enable
-for_window [class="Thunar"] floating enable
+for_window [class="Nautilus"] floating enable
 for_window [class="Gdebi-gtk"] floating enable
 for_window [class="Wicd-client.py"] floating enable
 for_window [class="Engrampa"] floating enable
-for_window [class="URxvt"] floating enable
 for_window [class="Steam"] floating enable
 for_window [window_role="pop-up"] floating enable
 no_focus [window_role="pop-up"]
@@ -255,7 +256,7 @@ bar {
 ##
 
 # disable window titlesbars entirely
-for_window [class="^.*"] border pixel 8
+for_window [class="^.*"] border pixel 5
 
 # set inner/outer gaps
 gaps inner 45
