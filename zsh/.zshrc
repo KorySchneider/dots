@@ -4,6 +4,7 @@ export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
 export PATH="$PATH:/home/kory/scripts"
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 plugins=(
   git
@@ -56,12 +57,19 @@ alias li='xbacklight -set'
 
 alias wifireboot='sudo systemctl restart network-manager.service && echo "Restarting network manager"'
 
-alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
-  echo "Loading nvm..."; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh";\
-  echo "Loading nvm bash_completion..."; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion";\
-  echo "Done"'
+export NVM_DIR="$HOME/.nvm"
+# Lazy load nvm, npm
+nvm() {
+    unset -f nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    nvm "$@"
+}
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+npm() {
+    unset -f npm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    npm "$@"
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
