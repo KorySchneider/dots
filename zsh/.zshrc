@@ -58,18 +58,7 @@ alias li='xbacklight -set'
 alias wifireboot='sudo systemctl restart network-manager.service && echo "Restarting network manager"'
 
 export NVM_DIR="$HOME/.nvm"
-# Lazy load nvm, npm
-nvm() {
-    unset -f nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    nvm "$@"
-}
-
-npm() {
-    unset -f npm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    npm "$@"
-}
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
