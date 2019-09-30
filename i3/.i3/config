@@ -233,7 +233,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
   position bottom
-  tray_output primary
+  tray_output none
   font xft:Roboto 12
   workspace_buttons yes
   height 30
