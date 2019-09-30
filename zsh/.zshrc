@@ -38,7 +38,7 @@ f () {
 
 alias please='sudo $(fc -ln -1)'
 
-alias py3='python3.6'
+alias py3='python3'
 alias pip='pip3'
 
 alias slp='sleep 2; systemctl suspend && exit'
