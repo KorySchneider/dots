@@ -146,7 +146,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'really exit?' -b 'Yes, do the thing' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Really exit?' -b 'Yes, do the thing' 'i3-msg exit'"
 
 ##
 # Resize
@@ -189,8 +189,9 @@ exec --no-startup-id dropbox start
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
-exec --no-startup-id xinput set-prop 10 287 1
-exec --no-startup-id xinput set-prop 10 289 1
+exec --no-startup-id xinput set-prop 10 287 1 # tapping
+exec --no-startup-id xinput set-prop 10 289 1 # tapping drag
+exec --no-startup-id xinput set-prop 10 295 1 # natural scrolling
 
 # Start floating
 for_window [class="Leafpad"] floating enable
