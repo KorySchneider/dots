@@ -32,6 +32,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " General Settings
+set clipboard=unnamed
 set nocompatible
 set mouse=a
 set title
