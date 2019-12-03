@@ -32,6 +32,8 @@ f () {
   fi
 }
 
+alias brew='HOMEBREW_NO_AUTO_UPDATE=true brew'
+
 alias please='sudo $(fc -ln -1)'
 
 alias py3='python3'
