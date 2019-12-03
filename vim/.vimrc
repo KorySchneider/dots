@@ -28,6 +28,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'Townk/vim-autoclose'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
