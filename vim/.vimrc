@@ -29,6 +29,8 @@ Plug 'Townk/vim-autoclose'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -73,6 +75,12 @@ colorscheme gruvbox
 
 " Custom Bindings
 let mapleader=","
+
+" Snippets
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]
 
 " ctrl+T NerdTree toggle
 map <silent> <c-t> :NERDTreeToggle<CR>
