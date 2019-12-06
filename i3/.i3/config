@@ -192,6 +192,7 @@ exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
 exec --no-startup-id xinput set-prop 10 287 1 # tapping
 exec --no-startup-id xinput set-prop 10 289 1 # tapping drag
 exec --no-startup-id xinput set-prop 10 295 1 # natural scrolling
+exec --no-startup-id amixer -q -D sset Master 25 # set volume
 
 # Start floating
 for_window [class="Leafpad"] floating enable

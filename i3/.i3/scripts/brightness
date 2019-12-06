@@ -3,8 +3,9 @@
 STEP=5
 
 case $BLOCK_BUTTON in
-  4) xbacklight -inc $STEP ;; # scroll up, increase
-  5) xbacklight -dec $STEP ;; # scroll down, decrease
+  # reversed to make natural scrolling feel natural in this context
+  5) xbacklight -inc $STEP ;; # scroll down, increase
+  4) xbacklight -dec $STEP ;; # scroll up, decrease
 esac
 
 printf '%.*f%%\n' 0 $(xbacklight -get)
