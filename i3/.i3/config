@@ -189,8 +189,8 @@ exec --no-startup-id dropbox start
 exec --no-startup-id ~/.scripts/screenblank
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
-exec --no-startup-id xinput set-prop 10 287 1 # tapping
-exec --no-startup-id xinput set-prop 10 289 1 # tapping drag
+exec --no-startup-id xinput set-prop 10 301 1 # tapping
+exec --no-startup-id xinput set-prop 10 303 1 # tapping drag
 exec --no-startup-id xinput set-prop 10 309 1 # natural scrolling
 exec --no-startup-id amixer -q -D sset Master 25 # set volume
 
