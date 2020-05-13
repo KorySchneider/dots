@@ -12,6 +12,7 @@ Plug 'junegunn/goyo.vim' | let g:goyo_width = 85
 Plug 'junegunn/limelight.vim' | let g:limelight_conceal_ctermfg = 240
 Plug 'haya14busa/incsearch.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'airblade/vim-gitgutter'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'
@@ -31,6 +32,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 call plug#end()
 
@@ -73,6 +75,19 @@ syntax enable
 set background=dark
 colorscheme gruvbox
 
+" git gutter
+"highlight! link SignColumn LineNr
+highlight! link SignColumn Bg
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+let g:gitgutter_sign_added              = '┃'
+let g:gitgutter_sign_modified           = '┃'
+let g:gitgutter_sign_removed            = '┃'
+let g:gitgutter_sign_removed_first_line = '┃'
+let g:gitgutter_sign_modified_removed   = '┃'
+set updatetime=100
+
 " Custom Bindings
 let mapleader=","
 
@@ -80,18 +95,27 @@ let mapleader=","
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]
+let g:UltiSnipsSnippetDirectories=["custom-snippets"]
+
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_disable_signature_help = 1
 
 " ctrl+T NerdTree toggle
 map <silent> <c-t> :NERDTreeToggle<CR>
+
 " goyo
 map <silent> <c-g> :Goyo<CR>
+
+" Leader mappings
 " , (c)lear (s)earch
 nnoremap <silent> <leader>cs :nohl<CR>
 " , (ta)b guides
 nnoremap <silent> <leader>ta :IndentGuidesToggle<CR>
 " , (sp)ell check
-nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us <CR>
+nnoremap <silent> <leader>sp :setlocal spell spelllang=en_us<CR>
+" , (g)it (d)iff (GitGutter)
+nnoremap <silent> <leader>gd :GitGutterBufferToggle<CR>
 
 " FZF
 map <silent> <c-o> :Files<CR>

@@ -71,3 +71,5 @@ export NVM_DIR="$HOME/.nvm"
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
+
+source /Users/koryschneider/Library/Preferences/org.dystroy.broot/launcher/bash/br

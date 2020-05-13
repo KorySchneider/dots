@@ -1,9 +1,14 @@
+#zmodload zsh/zprof # uncomment for profiling (also last line of file)
+
 export ZSH=$HOME/.oh-my-zsh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export PATH="$HOME/.golang:$HOME/.golang/bin:$PATH"
 export PATH="$PATH:/home/kory/scripts"
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 plugins=(
   tmux
@@ -20,6 +25,10 @@ ZSH_TMUX_AUTOCONNECT="false"
 
 source $ZSH/oh-my-zsh.sh
 
+start() {
+  APP="$1" make start
+}
+
 alias l='ls -1G'
 alias ll='ls -lG'
 alias ls='ls -G'
@@ -32,6 +41,8 @@ f () {
   fi
 }
 
+alias mp='make pretty'
+
 alias brew='HOMEBREW_NO_AUTO_UPDATE=true brew'
 
 alias please='sudo $(fc -ln -1)'
@@ -40,14 +51,11 @@ alias py3='python3'
 alias pip='pip3'
 
 alias slp='sleep 2; systemctl suspend && exit'
-alias pwroff='killall chrome && shutdown now'
 
 alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
-
-alias ick='ack -i'
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_12_HOME=$(/usr/libexec/java_home -v12)
@@ -55,19 +63,33 @@ alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java12='export JAVA_HOME=$JAVA_12_HOME'
 java12 # default to Java 12
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# NVM on the fly
+declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 
-# ^ this makes zsh start real slow. Use alias instead, before using nvm:
-#alias nvmload='echo "Setting ~/.nvm directory..."; NVM_DIR="$HOME/.nvm";\
-#  echo "Loading nvm..."; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh";\
-#  echo "Loading nvm bash_completion..."; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion";\
-#  echo "Done"'
+NODE_GLOBALS+=("node")
+NODE_GLOBALS+=("nvm")
+NODE_GLOBALS+=("npm")
+NODE_GLOBALS+=("pnpm")
+NODE_GLOBALS+=("yarn")
+NODE_GLOBALS+=("make")
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+load_nvm () {
+    echo -n "Loading nvm..."
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    echo "done"
+}
 
+for cmd in "${NODE_GLOBALS[@]}"; do
+    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+done
+
+# fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+# so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
+
+source /Users/koryschneider/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+#zprof # uncomment for profiling (also first line of file)
