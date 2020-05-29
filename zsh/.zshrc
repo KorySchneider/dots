@@ -29,6 +29,8 @@ start() {
   APP="$1" make start
 }
 
+alias vims='vim -S ~/.vim/Session.vim'
+
 alias l='ls -1G'
 alias ll='ls -lG'
 alias ls='ls -G'

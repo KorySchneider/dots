@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " UI
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline' | let g:airline#extensions#obsession#enabled = 1
 Plug 'vim-airline/vim-airline-themes' | let g:airline_theme='gruvbox'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/goyo.vim' | let g:goyo_width = 85
@@ -33,6 +33,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'tpope/vim-obsession'
 
 call plug#end()
 
@@ -97,9 +98,15 @@ let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let g:UltiSnipsSnippetDirectories=["custom-snippets"]
 
+" YouCompleteMe
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_disable_signature_help = 1
+let g:ycm_auto_hover = ''
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 
 " ctrl+T NerdTree toggle
 map <silent> <c-t> :NERDTreeToggle<CR>
