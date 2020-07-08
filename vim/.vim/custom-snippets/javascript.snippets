@@ -1,0 +1,84 @@
+snippet cl "console.log()"
+console.log($1)
+endsnippet
+
+snippet rs "return state;"
+return state;
+endsnippet
+
+snippet ap "action?.payload"
+action?.payload;
+endsnippet
+
+snippet im "import x from 'y'"
+import ${1} from '${2}';
+endsnippet
+
+snippet imm "import { member } from 'y'"
+import { ${1} } from '${2}';
+endsnippet
+
+snippet imas "import * as x from 'y'"
+import * as ${1} from '${2}';
+endsnippet
+
+snippet mui "material-ui react component"
+// libs
+import React from 'react';
+
+// components
+import { withStyles } from '@material-ui/core';
+
+const styles = theme => ({
+	root: {},
+});
+
+const ${1} = props => {
+	const { classes } = props;
+
+	return (
+		<div className={classes.root}>
+			${2:$1}
+		</div>
+	);
+};
+
+export default withStyles(styles)(${2:$1});
+endsnippet
+
+snippet dba "dispatch buildAction"
+dispatch(buildAction(${1}))
+endsnippet
+
+snippet cn "className"
+className={classes.${1}}
+endsnippet
+
+snippet if "if statement"
+if (${1}) {
+	${2}
+}
+endsnippet
+
+snippet af "arrow function"
+(${1}) => {${2}}
+endsnippet
+
+snippet it "jest it"
+it('${1}', () => {
+});
+endsnippet
+
+snippet red "reducer"
+[Actions.${1}]: (state, action) => {
+	${2}
+	return state;
+},
+endsnippet
+
+snippet sch "schema item"
+${1}: {
+	sql: \`${2}\`,
+	type: \`${3}\`
+},
+endsnippet
