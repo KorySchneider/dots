@@ -29,7 +29,14 @@ start() {
   APP="$1" make start
 }
 
+replace() {
+  sed -i'' -e "$1" "$2"
+}
+
 alias vims='vim -S ~/.vim/Session.vim'
+
+alias gs='gss'
+alias gsss='gss'
 
 alias l='ls -1G'
 alias ll='ls -lG'
@@ -39,6 +46,7 @@ alias la='ls -aG'
 f () {
   local file=$(fzf --height 10%)
   if [[ $file != "" ]]; then
+    echo $file
     vim $file
   fi
 }
