@@ -29,8 +29,13 @@ start() {
   APP="$1" make start
 }
 
+storybook() {
+  STORYBOOK="$1" make storybook
+}
+
 replace() {
-  sed -i'' -e "$1" "$2"
+  # example usage: replace 's/FROM_TEXT/TO_TEXT/g' '*.js'
+  find . -type f -name "$2" | xargs sed -i "$1"
 }
 
 alias vims='vim -S ~/.vim/Session.vim'
@@ -38,10 +43,14 @@ alias vims='vim -S ~/.vim/Session.vim'
 alias gs='gss'
 alias gsss='gss'
 
-alias l='ls -1G'
-alias ll='ls -lG'
-alias ls='ls -G'
-alias la='ls -aG'
+#alias l='ls -1G'
+#alias ll='ls -lG'
+#alias ls='ls -G'
+#alias la='ls -aG'
+alias ls='exa'
+alias l='exa -1'
+alias ll='exa -l'
+alias la='exa -a'
 
 f () {
   local file=$(fzf --height 10%)
