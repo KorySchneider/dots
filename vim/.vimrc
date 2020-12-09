@@ -37,6 +37,12 @@ Plug 'tpope/vim-obsession'
 
 call plug#end()
 
+" vim airline customization
+function! AirlineInit()
+  let g:airline_section_b = airline#section#create([''])
+endfunction
+autocmd VimEnter * call AirlineInit()
+
 " General Settings
 set clipboard=unnamed
 set nocompatible

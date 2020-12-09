@@ -25,6 +25,10 @@ ZSH_TMUX_AUTOCONNECT="false"
 
 source $ZSH/oh-my-zsh.sh
 
+fixmon() {
+  displayplacer "id:76ACE166-E098-73AF-D408-467A8188A4A3 res:1680x1050 color_depth:8 scaling:on origin:(0,0) degree:0" "id:D58A480C-4751-8973-B780-0618BE306337 res:1920x1080 hz:75 color_depth:8 scaling:off origin:(-1057,-1080) degree:0" "id:2E935981-DFF7-367A-30F1-00713A09B5EE res:1920x1080 hz:75 color_depth:8 scaling:off origin:(863,-1080) degree:0"
+}
+
 start() {
   APP="$1" make start
 }
@@ -34,8 +38,13 @@ storybook() {
 }
 
 replace() {
-  # example usage: replace 's/FROM_TEXT/TO_TEXT/g' '*.js'
+  # usage:
+  # $ replace 's/FROM_TEXT/TO_TEXT/g' '*.js'
   find . -type f -name "$2" | xargs sed -i "$1"
+}
+
+clearport() {
+  kill -9 $(lsof -ti tcp:"$1")
 }
 
 alias vims='vim -S ~/.vim/Session.vim'
@@ -43,10 +52,6 @@ alias vims='vim -S ~/.vim/Session.vim'
 alias gs='gss'
 alias gsss='gss'
 
-#alias l='ls -1G'
-#alias ll='ls -lG'
-#alias ls='ls -G'
-#alias la='ls -aG'
 alias ls='exa'
 alias l='exa -1'
 alias ll='exa -l'
