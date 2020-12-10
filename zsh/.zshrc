@@ -33,10 +33,6 @@ start() {
   APP="$1" make start
 }
 
-storybook() {
-  STORYBOOK="$1" make storybook
-}
-
 replace() {
   # usage:
   # $ replace 's/FROM_TEXT/TO_TEXT/g' '*.js'
