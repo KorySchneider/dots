@@ -158,6 +158,7 @@ autocmd filetype python set tabstop=4 shiftwidth=4
 autocmd filetype gitcommit setlocal spell textwidth=72
 autocmd filetype rust set tabstop=4 shiftwidth=4
 autocmd filetype markdown setlocal spell textwidth=80
+autocmd filetype javascript set tabstop=2 shiftwidth=2
 
 " fzf colors
 let g:fzf_colors =

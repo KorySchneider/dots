@@ -9,6 +9,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/Applications/sonar-scanner-4.5.0.2216-macosx/bin:$PATH"
 
 plugins=(
   tmux
@@ -29,8 +30,8 @@ fixmon() {
   displayplacer "id:76ACE166-E098-73AF-D408-467A8188A4A3 res:1680x1050 color_depth:8 scaling:on origin:(0,0) degree:0" "id:D58A480C-4751-8973-B780-0618BE306337 res:1920x1080 hz:75 color_depth:8 scaling:off origin:(-1057,-1080) degree:0" "id:2E935981-DFF7-367A-30F1-00713A09B5EE res:1920x1080 hz:75 color_depth:8 scaling:off origin:(863,-1080) degree:0"
 }
 
-start() {
-  APP="$1" make start
+dev() {
+  APP_NAME="$1" make devserver
 }
 
 replace() {
@@ -41,6 +42,10 @@ replace() {
 
 clearport() {
   kill -9 $(lsof -ti tcp:"$1")
+}
+
+monfix() {
+  displayplacer "id:76ACE166-E098-73AF-D408-467A8188A4A3 res:1680x1050 color_depth:8 scaling:on origin:(0,0) degree:0" "id:D58A480C-4751-8973-B780-0618BE306337 res:1920x1080 hz:75 color_depth:8 scaling:off origin:(848,-1080) degree:0" "id:2E935981-DFF7-367A-30F1-00713A09B5EE res:1920x1080 hz:75 color_depth:8 scaling:off origin:(-1072,-1080) degree:0"
 }
 
 alias vims='vim -S ~/.vim/Session.vim'
