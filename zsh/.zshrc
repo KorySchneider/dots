@@ -48,10 +48,10 @@ monfix() {
   displayplacer "id:76ACE166-E098-73AF-D408-467A8188A4A3 res:1680x1050 color_depth:8 scaling:on origin:(0,0) degree:0" "id:D58A480C-4751-8973-B780-0618BE306337 res:1920x1080 hz:75 color_depth:8 scaling:off origin:(848,-1080) degree:0" "id:2E935981-DFF7-367A-30F1-00713A09B5EE res:1920x1080 hz:75 color_depth:8 scaling:off origin:(-1072,-1080) degree:0"
 }
 
-# Ctrl-H move left one word
-# Ctrl-L move right one word
-bindkey "^H" backward-word
-bindkey "^L" forward-word
+# Ctrl+Left move left one word
+# Ctrl+Right move right one word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 alias vims='vim -S ~/.vim/Session.vim'
 
@@ -86,6 +86,8 @@ alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
+
+alias stonks='tickrs --summary --symbols GME,AMD,TSLA,FCEL,GRUB,IDEX,LI,PLTR,ICLN'
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_12_HOME=$(/usr/libexec/java_home -v12)

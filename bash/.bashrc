@@ -73,3 +73,4 @@ export NVM_DIR="$HOME/.nvm"
 stty -ixon
 
 source /Users/koryschneider/Library/Preferences/org.dystroy.broot/launcher/bash/br
+source "$HOME/.cargo/env"
