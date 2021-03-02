@@ -87,7 +87,7 @@ alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
-alias stonks='tickrs --summary --symbols GME,AMD,TSLA,FCEL,GRUB,IDEX,LI,PLTR,ICLN'
+alias stonks='tickrs --summary --symbols GME,TSLA,FCEL,PLTR,THCX,TLRY,MMEDF'
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_12_HOME=$(/usr/libexec/java_home -v12)

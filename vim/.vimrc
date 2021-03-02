@@ -112,6 +112,7 @@ let g:ycm_auto_hover = ''
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_filetype_specific_completion_to_disable = { 'gitcommit': 1, 'javascript': 1 }
 
 " ctrl+T NerdTree toggle
 map <silent> <c-t> :NERDTreeToggle<CR>
