@@ -1,5 +1,6 @@
 #zmodload zsh/zprof # uncomment for profiling (also last line of file)
 
+export EDITOR=vim
 export ZSH=$HOME/.oh-my-zsh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="$HOME/.node_modules_global/bin:$PATH"
@@ -58,6 +59,16 @@ alias vims='vim -S ~/.vim/Session.vim'
 alias gs='gss'
 alias gsss='gss'
 
+function feature() {
+  git checkout -b "feature/$1"
+}
+function release() {
+  git checkout -b "release/$1"
+}
+function hotfix() {
+  git checkout -b "hotfix/$1"
+}
+
 alias ls='exa'
 alias l='exa -1'
 alias ll='exa -l'
@@ -87,7 +98,7 @@ alias updot='cd ~/dots && git commit -am "Update dots" && git push && cd -'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
-alias stonks='tickrs --summary --symbols GME,TSLA,FCEL,PLTR,THCX,TLRY,MMEDF'
+alias stonks='tickrs --summary --symbols GME,MNMD'
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_12_HOME=$(/usr/libexec/java_home -v12)
@@ -104,6 +115,7 @@ NODE_GLOBALS+=("npm")
 NODE_GLOBALS+=("pnpm")
 NODE_GLOBALS+=("yarn")
 NODE_GLOBALS+=("make")
+NODE_GLOBALS+=("vim")
 
 load_nvm () {
     echo -n "Loading nvm..."

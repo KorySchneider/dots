@@ -34,6 +34,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'tpope/vim-obsession'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
 
@@ -113,6 +114,16 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_filetype_specific_completion_to_disable = { 'gitcommit': 1, 'javascript': 1 }
+
+" Prettier
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#single_quote = 1
+let g:prettier#config#jsx_single_quote = 1
+let g:prettier#config#end_of_line = 'lf'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#tab_width = 2
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " ctrl+T NerdTree toggle
 map <silent> <c-t> :NERDTreeToggle<CR>
