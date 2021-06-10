@@ -35,6 +35,10 @@ dev() {
   APP_NAME="$1" make devserver
 }
 
+storybook() {
+  APP_NAME="$1" make storybook
+}
+
 replace() {
   # usage:
   # $ replace 's/FROM_TEXT/TO_TEXT/g' '*.js'
